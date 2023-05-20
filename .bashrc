@@ -114,3 +114,10 @@ if [ -x /usr/bin/mint-fortune ]; then
 fi
 
 export COLORTERM=truecolor
+export TERM=xterm-direct
+export VISUAL="/usr/bin/emacsclient -nw --alternate-editor= "
+export EDITOR="$VISUAL"
+
+alias emacs="emacsclient --alternate-editor= "
+# alias mc="mc -b"
+alias mc="TERM=xterm-256color mc"

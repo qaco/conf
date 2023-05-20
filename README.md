@@ -5,6 +5,7 @@
 ### Choose an emulator
 
 Tilix is a good compromise:
+* It works well with emacs (just needs the melpa package xclip for copy/paste)
 * It provides 256 colors.
 * It really supports Unicode.
 * But it depends on GTk3 and does not provide a text configuration file.
