@@ -207,7 +207,7 @@ bindsym $mod+Shift+x exec emacsclient -c
 # Print screen
 bindsym Print exec --no-startup-id maim "/tmp/$(date).png"
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/tmp/$(date).png"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/tmp/$(date).png"
+bindsym Shift+Print exec --no-startup-id maim --select "/tmp/$(date).png"
 
 exec --no-startup-id feh --recursive --randomize --bg-scale ~/Images/Wallpapers/Favoris
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
