@@ -118,6 +118,7 @@ export TERM=xterm-direct
 export VISUAL="/usr/bin/emacsclient -nw --alternate-editor= "
 export EDITOR="$VISUAL"
 
-alias emacs="emacsclient --alternate-editor= "
+alias emacs="emacsclient -c --alternate-editor= "
 # alias mc="mc -b"
 alias mc="TERM=xterm-256color mc"
+alias neomutt="TERM=xterm-256color neomutt"
