@@ -234,5 +234,7 @@ bindsym $mod+Shift+x exec zathura
 # Terminal/emacs
 bindsym $mod+Return exec tilix
 bindsym $mod+Shift+Return exec emacsclient -c
+# Cal
+bindsym $mod+c exec naivecalendar.sh -t onedark
 # App launcher
 bindsym $mod+d exec "rofi -modi drun,run -show drun"

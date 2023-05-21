@@ -118,7 +118,12 @@ export TERM=xterm-direct
 export VISUAL="/usr/bin/emacsclient -nw --alternate-editor= "
 export EDITOR="$VISUAL"
 
+export PATH=$PATH:~/src/naivecalendar/src/
+export PATH=$PATH:~/conf/scripts/
+
 alias emacsclient="emacsclient -c --alternate-editor= "
 # alias mc="mc -b"
 alias mc="TERM=xterm-256color mc"
 alias neomutt="TERM=xterm-256color neomutt"
+alias naivecalendar="naivecalendar.sh -t onedark" 
+alias cp="gcp"
