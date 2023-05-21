@@ -211,7 +211,12 @@ client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
 # Load a random wallpaper
-exec --no-startup-id feh --recursive --randomize --bg-scale ~/Images/Wallpapers/Favoris
+exec --no-startup-id feh --bg-fill $(find Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)
+bindsym $mod+q exec --no-startup-id i3lock --image=$(cat /tmp/bg.txt)
+# exec "xautolock -detectsleep -time 15 -locker \"i3lock --image=$(cat /tmp/bg.txt)\""
+
+# Compositor
+# exec --no-startup-id picom
 # Avoid screen tearing
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
