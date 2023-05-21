@@ -56,6 +56,12 @@ URxvt.boldfont: xft:DejaVu Sans Mono:bold:size=11
  
 ## Drivers
 
+### Printers
+
+```
+sudo usermod -a -G lpadmin hpompougnac
+```
+
 ### Network
 
 Wifi:

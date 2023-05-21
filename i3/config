@@ -223,9 +223,9 @@ bindsym Shift+Print exec --no-startup-id maim --select "/tmp/$(date).png"
 # Browser
 bindsym $mod+w exec firefox
 bindsym $mod+Shift+w exec thunderbird
-# Libreoffice
+# Office writer/PDF reader
 bindsym $mod+x exec abiword
-bindsym $mod+Shift+x exec gnumeric
+bindsym $mod+Shift+x exec zathura
 # Terminal/emacs
 bindsym $mod+Return exec tilix
 bindsym $mod+Shift+Return exec emacsclient -c
