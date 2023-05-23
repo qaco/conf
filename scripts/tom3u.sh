@@ -5,20 +5,33 @@ if [[ $# -ne 2 ]] ; then
     exit 1
 fi
 
-numfiles=$(find "$1" -regex ".*\.\(mp3\|flac\)" | wc -l)
-i=0
-
+# Header of the playlist
 echo "#EXTM3U" > $2
 
+dname0="$(realpath "$1")"
+numfiles=$(find "$1" -regex ".*\.\(mp3\|flac\)" | wc -l)
+i=0
+START=$(vramsteg --now)
+# For each flac or mp3 file (recursively)
 shopt -s globstar
-for f in "$1"/**/*.{flac,mp3}; do
-    track=$(ffprobe "$f" |& grep -i -m 1 "track" | cut -d ':' -f 2 | sed 's/^ //g')
-    title=$(ffprobe "$f" |& grep -i -m 1 "title" || echo ' : Unknown' | cut -d ':' -f 2 | sed 's/^ //g')
-    artist=$(ffprobe "$f" |& grep -i -m 1 "artist" || echo ' : Unknown' | cut -d ':' -f 2 | sed 's/^ //g')
-    echo "#EXTINF:$track, $artist - $title" >> $2
-    dname1="$(realpath "$f")"
-    echo "$dname1" >> $2
+for f in "$dname0"/**/*.{flac,mp3}; do
+    # Get metadata
+    rprt=$(ffprobe "$f" |& cat)
+    # Parse metadata
+    track=$(echo "$rprt" | grep -i -m 1 "track" | cut -d ':' -f 2 | sed 's/^ //g')
+    title=$(echo "$rprt" | grep -i -m 1 "title" || echo ' : Unknown' | cut -d ':' -f 2)
+    artist=$(echo "$rprt" | grep -i -m 1 "artist" || echo ' : Unknown' | cut -d ':' -f 2)
+    # Write metadata of the playlist
+    # (test because there is a bug)
+    if [ -f "$f" ]
+    then
+	   echo "#EXTINF:$track, $artist - $title" | tr -s " " >> $2
+	   echo "$f" >> $2
+    fi
+    # Update counter
     ((i=i+1))
-    vramsteg --label "$i/$numfiles" --min 0 --max $numfiles --current $i
+    # Update progress bar
+    lab="$(printf '%10s ' "$i/$numfiles")"
+    vramsteg --label "$lab" vramsteg --start=$START --estimate --min 0 --max $numfiles --current $i
 done
 vramsteg --remove
