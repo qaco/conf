@@ -5,13 +5,13 @@ if [[ $# -ne 2 ]] ; then
     exit 1
 fi
 
-numfiles=$(find "$1" -name "*.flac" | wc -l)
+numfiles=$(find "$1" -regex ".*\.\(mp3\|flac\)" | wc -l)
 i=0
 
 echo "#EXTM3U" > $2
 
 shopt -s globstar
-for f in "$1"/**/*.flac; do
+for f in "$1"/**/*.{flac,mp3}; do
     track=$(ffprobe "$f" |& grep -i -m 1 "track" | cut -d ':' -f 2 | sed 's/^ //g')
     title=$(ffprobe "$f" |& grep -i -m 1 "title" || echo ' : Unknown' | cut -d ':' -f 2 | sed 's/^ //g')
     artist=$(ffprobe "$f" |& grep -i -m 1 "artist" || echo ' : Unknown' | cut -d ':' -f 2 | sed 's/^ //g')
