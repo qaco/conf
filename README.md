@@ -1,5 +1,15 @@
 # Debian installation
 
+## TODO
+
+### Color in tty
+
+```TERM=xterm-256color emacsclient -nw .bashrc``` needed;
+but the same command, in GUI, breaks colors.
+
+Need a conditional alias using (I guess)
+```tty | grep tty > /dev/null && alias emacsclient="TERM=xterm-256color emacsclient"```
+
 ## Console
 
 ### Choose an emulator
