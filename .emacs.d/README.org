@@ -1,0 +1,180 @@
+* Keybinds
+** F-keys
+
+compile                             f1   
+new-compile-cmd                     C-f1 
+recompile                           f2   
+flycheck                            C-f2 
+next-error                          f3   
+flycheck-next-error                 C-f3 
+revert-buffer                       f4   
+                                         
+split-horizontally                  f5   
+regle                               C-f5 
+split-vertically                    f6   
+delete-window                       f8   
+                                         
+maximize                            C-f11
+fullscreen                          f11
+
+** Documentation
+
+*** Emacs/Elisp
+
+describe-function   C-h f  
+describe-variable   C-h v  
+describe-bindings   C-h b  
+describe-key        C-h k  
+recherche commande  C-h a  
+view-emacs-problems C-h C-p
+view-emacs-todo     C-h C-t
+view home doc       C-h h
+
+*** UNIX
+
+man UNIX                             M-x man
+
+** Commandes
+
+Définir macro                        C-x ( / C-x )
+Exécuter la dernière macro           C-x e
+Évaluer                              C-c C-e
+Commande UNIX                        M-!
+Elisp Interpreter
+
+** Navigation
+
+caractère                C-b/C-f    
+mot                      M-b/M-f    
+ligne                    C-p/C-n    
+fin/début de ligne       C-a/C-e    
+fin/début de fonction    C-M-a/C-M-e
+écran suivant/précédent  C-v/M-v    
+centrer le curseur       C-l
+curseur en haut          M-r
+scroll other window      M-C-V/M-C-v
+select other window      S-<arrow>
+rechercher               C-s/C-r
+ace-jump-mode            C-c SPC
+placer bookmark          C-x r m name RET
+sauter au bookmark       C-x r b name RET
+supprimer bookmark       M-x delete
+liste des bookmarks      C-x r l
+
+** Affichage
+
+nombre de lignes                     M-l
+lignes                               C-x l
+
+** Édition
+
+*** Édition intelligente
+
+Commencer macro       C-x (
+Finir macro           C-x )
+Éxécuter macro        C-x e
+nommer macro          C-x C-k n
+chercher et remplacer M-%
+completion            C-:
+zap-to-char           M-z
+
+*** Inverser
+transpose-char C-t
+transpose-word M-t
+transpose-line C-x C-t
+*** Supprimer/commenter
+
+comment current line                 C-x C-;  
+copy and comment                     C-;      
+supprimer caractère                  DEL/C-d  
+supprimer mot                        M-DEL/M-d
+kill phrase                          M-k      
+kill sexp                            C-M-k    
+naviguer kill-ring                   M-y
+historique du kill ring M-y
+
+*** Marquer 
+
+manipuler le rectangle  C-x r *
+marquer le paragraphe   M-h  
+marquer la fonction     C-M-h
+marquer le buffer       C-x h
+étendre région          C-=
+
+*** Undo/Redo
+
+undo/redo                            C-_                   
+remonter undo-ring                   M-_                   
+undo/redo window configuration       C-c <left>/C-c <right>
+
+** Fichiers
+
+*** local
+
+fichiers récents                     C-x r             
+ouvrir en lecture seule              C-x C-q
+rafraîchir le buffer                 f4
+
+*** Magit
+
+lancer magit                         C-x g             
+stage files                          s                 
+commit                               c c (then C-c C-c)
+switch to another branch             b b               
+push                                 P u               
+pull                                 F u               
+                                                       
+** OCaml
+
+*** Tuareg
+
+toplevel                             M-x run-ocaml
+
+*** Merlin
+
+get type of expression               C-c C-t
+go to definition of identifier       C-c C-l
+** Shell
+
+*** Ansi-term
+launch                               C-x C-x
+
+* Locations
+** Elisp files
+
+elisp built-in files : /usr/local/share/emacs/$VERSION/
+
+* Configuration snippets
+** Indentation
+*** Indentation agressive
+
+#+BEGIN_SRC emacs-lisp
+(global-aggressive-indent-mode 1)
+#+END_SRC
+
+** Informations à afficher
+*** Numérotation des lignes
+
+#+BEGIN_SRC emacs-lisp
+(global-linum-mode t)
+#+END_SRC
+
+*** Indicateur de coupure de la ligne
+
+#+BEGIN_SRC emacs-lisp
+(setq-default fringe-indicator-alist                                       
+              '((truncation left-arrow right-arrow)                        
+                (continuation nil nil) ;; left-curly-arrow & right-curly-ar
+                (overlay-arrow . right-triangle)                           
+                (up . up-arrow)                                            
+                (down . down-arrow)                                        
+                (top top-left-angle top-right-angle)                       
+                (bottom                                                    
+                 bottom-left-angle bottom-right-angle                      
+                 top-right-angle top-left-angle)                           
+                (top-bottom                                                
+                 left-bracket right-bracket top-right-angle top-left-angle)
+                (empty-line . empty-line)                                  
+                (unknown . question-mark)))
+
+#+END_SRC
