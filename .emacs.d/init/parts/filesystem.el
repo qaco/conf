@@ -19,8 +19,8 @@
 ;; recentf
 
 (require 'recentf)
-(setq recentf-max-saved-items 50)                 ; 50 derniers fichiers
 (recentf-mode 1)
+(setq recentf-max-saved-items 25)                 ; 50 derniers fichiers
 
 (defun ido-recentf-open ()
   "Use `ido-completing-read' to \[find-file] a recent file"

@@ -23,7 +23,7 @@
               word-wrap t)                    ; coupe après le mot
 
 (global-visual-line-mode t)
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;; edition/navigation
 

@@ -53,6 +53,10 @@ prompt {
     text-color: @accent-color;
 }
 
+entry {
+    text-color: @text-color;
+}
+
 listview {
     lines:      8;
     columns:    1;

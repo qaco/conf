@@ -239,6 +239,7 @@ bindsym $mod+c exec naivecalendar.sh -t onedark
 # App launcher
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
 # Music
+# bindsym $mod+m exec playerctl next
 bindsym $mod+n exec playerctl next
 bindsym $mod+p exec playerctl play-pause
 bindsym $mod+Shift+p exec playerctl previous
