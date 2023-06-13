@@ -1,0 +1,139 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/hpompougnac/conf/.emacs.d/" . "init/")
+ ("/home/hpompougnac/conf/.emacs.d/init/" . "parts/")
+ ("/home/" . "hpompougnac/")
+ ("/home/hpompougnac/conf/rofi/" . "themes/")
+ ("/home/hpompougnac/.local/share/" . "rofi/")
+ ("/home/hpompougnac/.local/" . "share/")
+ ("/home/hpompougnac/.local/share/rofi/" . "themes/")
+ ("/home/hpompougnac/.neomutt/com.gmail.officiel/" . "cache/")
+ ("/home/hpompougnac/.neomutt/" . "com.gmail.officiel/")
+ ("/home/hpompougnac/.emacs.d/init/" . "parts/")
+ ("/home/hpompougnac/.emacs.d/" . "init/")
+ ("/home/hpompougnac/conf/" . ".emacs.d/")
+ ("/home/hpompougnac/.config/" . "picom/")
+ ("/home/hpompougnac/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/hpompougnac/conf/.emacs.d/init/parts/"
+ "/home/hpompougnac/"
+ "/home/hpompougnac/src/mlir-rt/mlir-lus/"
+ "/home/hpompougnac/.emacs.d/init/parts/"
+ "/home/hpompougnac/.emacs.d/elisp/"
+ "/home/hpompougnac/.playlists/"
+ "/home/hpompougnac/conf/conky/"
+ "/home/hpompougnac/conf/scripts/"
+ "/home/hpompougnac/conf/"
+ "/home/hpompougnac/conf/picom/"
+ "/home/hpompougnac/.config/i3/"
+ "/home/hpompougnac/.config/picom/"
+ "/home/hpompougnac/conf/rofi/themes/"
+ "/home/hpompougnac/.local/share/rofi/themes/"
+ "/home/hpompougnac/.config/rofi/"
+ "/home/hpompougnac/conf/i3/"
+ "/home/hpompougnac/.neomutt/"
+ "/home/hpompougnac/.neomutt/com.gmail.officiel/cache/"
+ "/home/hpompougnac/.config/neomutt/"
+ "/home/hpompougnac/.config/kitty/"
+ "/home/hpompougnac/.config/conky/"
+ "/home/hpompougnac/.config/fontconfig/"
+ "/home/hpompougnac/.moc/"
+ "/home/hpompougnac/.config/newsboat/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "filesystem.el"
+ "my-caml.el"
+ ".profile"
+ "ccode.config"
+ "my-packages.el"
+ "nw.el"
+ "default-behaviours.el"
+ "shortcuts.el"
+ "smarter-edition.el"
+ "extra-commands.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/hpompougnac/conf/.emacs.d/init/parts/" (25736 44311 302216 242000) "filesystem.el" "../" "my-packages.el" "nw.el" "shortcuts.el" "./" "appearence.el~" "default-behaviours.el" "appearence.el" "my-caml.el")
+
+ ("/home/hpompougnac/conf/.emacs.d/" (25736 49207 346762 265000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "eln-cache/" "backups/")
+
+ ("/home/hpompougnac/conf/" (25736 41114 227805 610000) "conky/" "../" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".emacs.d/" "README.md" "scripts/" "i3/" "picom/" "i3status/")
+
+ ("/home/hpompougnac/conf/i3/" (25736 40873 572063 957000) "conky-i3bar" "config" "keymap.conf" "../" "./")
+
+ ("/home/hpompougnac/conf/.emacs.d/init/" (25736 7495 635228 852000) "../" "parts/" ".emacs" "./")
+
+ ("/home/hpompougnac/" (25733 53374 157119 406000) "core" ".scripts/" ".cache/" ".local/" ".lesshst" ".naivecalendar_events/" "Images/" "Téléchargements/" "Documents/" ".terminfo/" "src/" ".neomutt/" "../" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".bashrc" ".pki/" ".bash_logout" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "stream-demux.dump" "Musique/" ".playlists/" ".mplayer/" ".emacs" "cat" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" ".gitconfig" ".newsboat/" ".profile" "go/" ".emacs.d/" ".Xauthority" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".nvidia-settings-rc" ".fonts/")
+
+ ("/home/hpompougnac/src/mlir-rt/mlir-lus/" (25732 32343 284765 499000) "Transforms/" "test.memref-copy.mlir" "testa.lus.mlir" "Tools/" "Makefile.config.example" "samples/" "../" ".gitignore" ".#Makefile" "libs.config" "ccode.config" "./" "test.lus.mlir" "Makefile" "Dialects/" "depend.config")
+
+ ("/home/hpompougnac/.emacs.d/init/parts/" (25732 18632 457293 33000) "filesystem.el" "../" "my-packages.el" "nw.el" "shortcuts.el" "./" "appearence.el~" "default-behaviours.el" "appearence.el" "my-caml.el")
+
+ ("/home/hpompougnac/.emacs.d/" (25732 18550 584556 90000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "backups/")
+
+ ("/home/hpompougnac/.emacs.d/elisp/" (25732 18543 628148 198000) "mlir-mode.el" "menhir-mode.el" "../" "auto-close-shell.el" "smarter-edition.el" "heptagon-mode.el" "./" "extra-commands.el" "dired-setup.el" "fill-column-indicator.el" "tablegen-mode.el")
+
+ ("/home/hpompougnac/.emacs.d/init/" (25705 23997 359136 440000) "../" "parts/" ".emacs" "./")
+
+ ("/home/hpompougnac/.playlists/" (25718 8156 823149 372000) "../" "presley_all.m3u" "broken.m3u" "barbara" "saez.m3u" "sylvestre.m3u" "./" "compil.m3u")
+
+ ("/home/hpompougnac/conf/conky/" (25707 51891 624099 465000) "../" "i3bar.conky.conf" "./")
+
+ ("/home/hpompougnac/conf/scripts/" (25707 54083 994484 459000) "playdir.sh" "tom3u.sh" "../" "tomp3.sh" "./")
+
+ ("/home/" (25702 17668 288099 264000) "hpompougnac/" "../" "./" "lost+found/")
+
+ ("/home/hpompougnac/.scripts/" (25704 7862 210361 848000) "speakers.sh" "wallpaper_changer.sh" "../" "current_wallpaper.sh" "emacs_reset.sh" ".bashrc" "music.ml" "command.ml" "music.sh" "rename_ebooks.py" "wallpaper_daily.sh" "./" ".git/" "del_screen_tearing.sh" "to_mp3.sh" "to_mp3_lossless.sh")
+
+ ("/home/hpompougnac/conf/picom/" (25705 28930 544875 339000) "../" "./" "picom.conf")
+
+ ("/home/hpompougnac/.config/i3/" (25704 49894 154605 691000) "conky-i3bar" "config" "../" "./")
+
+ ("/home/hpompougnac/.config/picom/" (25705 28985 491563 156000) "../" "./" "picom.conf")
+
+ ("/home/hpompougnac/.config/" (25705 27861 740884 144000) "tilix/" "conky/" "../" "dconf/" "pulse/" "libreoffice/" "fontconfig/" "mc/" "gtk-3.0/" "rofi/" "newsboat/" "./" "lxterminal/" "abiword/" "kitty/" "alacritty/" "i3/" "picom/" "i3status/")
+
+ ("/home/hpompougnac/conf/rofi/themes/" (25705 17102 689609 937000) "../" "onedark.rasi" "./")
+
+ ("/home/hpompougnac/conf/rofi/" (25705 17091 569063 765000) "../" "themes/" "./")
+
+ ("/home/hpompougnac/.local/share/rofi/themes/" (25705 16378 630039 100000) "../" "./")
+
+ ("/home/hpompougnac/.local/share/rofi/" (25705 15445 696107 467000) "../" "themes/" "./")
+
+ ("/home/hpompougnac/.local/share/" (25705 15445 696107 467000) "xorg/" "recently-used.xbel" "../" "mc/" "rofi/" "newsboat/" "./" "iwctl/" "nano/")
+
+ ("/home/hpompougnac/.local/" (25702 19142 977609 523000) "../" "share/" "./")
+
+ ("/home/hpompougnac/.config/rofi/" (25705 15085 914292 254000) "config.rasi" "../" "./")
+
+ ("/home/hpompougnac/.neomutt/" (25705 13418 336382 963000) "account.com.gmail.pcf" "../" "neomuttrc.bkp" "account.com.gmail.officiel" "neomuttrc" "colors" "com.gmail.pcf/" "./" "accounts" "com.gmail.officiel/" "settings")
+
+ ("/home/hpompougnac/.neomutt/com.gmail.officiel/cache/" (25705 5827 465522 702000) "../" "./" "headers")
+
+ ("/home/hpompougnac/.neomutt/com.gmail.officiel/" (25705 5827 465522 702000) "../" "cache/" "./")
+
+ ("/home/hpompougnac/.config/neomutt/" (25705 4541 935255 15000) "account.com.gmail.pcf" "../" "neomuttrc" "colors" "./" "accounts" "settings")
+
+ ("/home/hpompougnac/.config/kitty/" (25703 60906 109953 780000) "kitty.conf" "../" "./")
+
+ ("/home/hpompougnac/.config/conky/" (25704 2607 486987 35000) "../" "i3bar.conky.conf" "./")
+
+ ("/home/hpompougnac/.config/fontconfig/" (25703 43060 965502 232000) "../" "./" "fonts.conf")
+
+ ("/home/hpompougnac/.moc/" (25703 47201 854801 858000) "socket2" "config" "../" "cache/" "./" "pid" "last_directory")
+
+ ("/home/hpompougnac/.config/newsboat/" (25703 46958 310966 653000) "urls" "config" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
