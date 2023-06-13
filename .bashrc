@@ -120,6 +120,7 @@ export EDITOR="$VISUAL"
 
 if tty | grep -q 'tty'; then
     alias emacsclient="TERM=xterm-256color emacsclient -c --alternate-editor= "
+    alias emacs="TERM=xterm-256color emacs -c --alternate-editor= "
 else
     alias emacsclient="emacsclient -c --alternate-editor= "
 fi
@@ -134,3 +135,8 @@ export PATH=$PATH:~/bin/llvm/bin/
 
 alias naivecalendar="naivecalendar.sh -t onedark"
 alias mvlc='nvlc -Z --no-metadata-network-access'
+
+# Reminder:
+
+# Rip
+# abcde -o flac

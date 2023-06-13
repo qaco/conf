@@ -1,12 +1,12 @@
 (require 'extra-commands)
 (require 'buffer-move)
 (require 'auto-close-shell)
-(require 'fill-column-indicator)
+;; (require 'fill-column-indicator)
 (require 'smarter-edition)
 
 ;; display informations
 
-(global-set-key (kbd "C-<f5>") 'fci-mode)
+;; (global-set-key (kbd "C-<f5>") 'fci-mode)
 (global-set-key (kbd "C-x l") 'linum-mode)
 (global-set-key (kbd "M-l") 'count-lines-page)
 

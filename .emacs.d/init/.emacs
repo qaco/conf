@@ -12,7 +12,6 @@
 (require 'appearence)
 (require 'default-behaviours)
 (require 'filesystem)
-(require 'my-caml)
 (require 'shortcuts)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

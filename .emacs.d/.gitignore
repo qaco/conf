@@ -4,7 +4,8 @@ backups/
 auto-save-list/
 transient/
 themes/
-eshell/*
+eshell/
+eln-cache/
 
 \#*
 ido.last
