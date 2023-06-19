@@ -15,7 +15,7 @@ font pango:monospace
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager applet
 exec --no-startup-id nm-applet
@@ -212,7 +212,7 @@ client.background       $base07
 
 # Load a random wallpaper
 exec --no-startup-id feh --bg-fill $(find Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)
-bindsym $mod+q exec --no-startup-id i3lock --image=$(cat /tmp/bg.txt)
+# bindsym $mod+q exec --no-startup-id i3lock --image=$(cat /tmp/bg.txt)
 # exec "xautolock -detectsleep -time 15 -locker \"i3lock --image=$(cat /tmp/bg.txt)\""
 
 # Compositor

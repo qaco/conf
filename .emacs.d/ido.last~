@@ -2,7 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/hpompougnac/conf/.emacs.d/" . "init/")
+ ("/home/hpompougnac/conf/.emacs.d/" . "elisp/")
  ("/home/hpompougnac/conf/.emacs.d/init/" . "parts/")
  ("/home/" . "hpompougnac/")
  ("/home/hpompougnac/conf/rofi/" . "themes/")
@@ -20,7 +20,9 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/hpompougnac/conf/.emacs.d/init/"
  "/home/hpompougnac/conf/.emacs.d/init/parts/"
+ "/home/hpompougnac/conf/.emacs.d/elisp/"
  "/home/hpompougnac/"
  "/home/hpompougnac/src/mlir-rt/mlir-lus/"
  "/home/hpompougnac/.emacs.d/init/parts/"
@@ -48,29 +50,31 @@
 
 ;; ----- ido-work-file-list -----
 (
- "filesystem.el"
  "my-caml.el"
- ".profile"
- "ccode.config"
- "my-packages.el"
  "nw.el"
- "default-behaviours.el"
- "shortcuts.el"
  "smarter-edition.el"
  "extra-commands.el"
+ "shortcuts.el"
+ "filesystem.el"
+ "default-behaviours.el"
+ "appearence.el"
+ "my-packages.el"
+ ".emacs"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/hpompougnac/conf/.emacs.d/init/parts/" (25736 44311 302216 242000) "filesystem.el" "../" "my-packages.el" "nw.el" "shortcuts.el" "./" "appearence.el~" "default-behaviours.el" "appearence.el" "my-caml.el")
+ ("/home/hpompougnac/conf/.emacs.d/init/" (25736 52282 437470 935000) "../" ".emacs" "./")
 
- ("/home/hpompougnac/conf/.emacs.d/" (25736 49207 346762 265000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "eln-cache/" "backups/")
+ ("/home/hpompougnac/conf/.emacs.d/elisp/" (25732 19137 272685 47000) "mlir-mode.el" "menhir-mode.el" "../" "auto-close-shell.el" "smarter-edition.el" "heptagon-mode.el" "./" "extra-commands.el" "dired-setup.el" "fill-column-indicator.el" "tablegen-mode.el")
+
+ ("/home/hpompougnac/conf/.emacs.d/init/parts/" (25736 51068 171808 57000) "filesystem.el" "../" "my-packages.el" "nw.el" "shortcuts.el" "./" "appearence.el~" "default-behaviours.el" "appearence.el" "my-caml.el")
+
+ ("/home/hpompougnac/conf/.emacs.d/" (25736 49271 745482 277000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "eln-cache/" "backups/")
 
  ("/home/hpompougnac/conf/" (25736 41114 227805 610000) "conky/" "../" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".emacs.d/" "README.md" "scripts/" "i3/" "picom/" "i3status/")
 
  ("/home/hpompougnac/conf/i3/" (25736 40873 572063 957000) "conky-i3bar" "config" "keymap.conf" "../" "./")
-
- ("/home/hpompougnac/conf/.emacs.d/init/" (25736 7495 635228 852000) "../" "parts/" ".emacs" "./")
 
  ("/home/hpompougnac/" (25733 53374 157119 406000) "core" ".scripts/" ".cache/" ".local/" ".lesshst" ".naivecalendar_events/" "Images/" "Téléchargements/" "Documents/" ".terminfo/" "src/" ".neomutt/" "../" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".bashrc" ".pki/" ".bash_logout" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "stream-demux.dump" "Musique/" ".playlists/" ".mplayer/" ".emacs" "cat" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" ".gitconfig" ".newsboat/" ".profile" "go/" ".emacs.d/" ".Xauthority" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".nvidia-settings-rc" ".fonts/")
 
