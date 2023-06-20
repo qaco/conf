@@ -28,10 +28,10 @@ for f in "$dname0"/**/*.{flac,mp3}; do
 	   echo "#EXTINF:$track, $artist - $title" | tr -s " " >> $2
 	   echo "$f" >> $2
     fi
-    # Update counter
-    ((i=i+1))
     # Update progress bar
     lab="$(printf '%10s ' "$i/$numfiles")"
     vramsteg --label "$lab" vramsteg --start=$START --estimate --min 0 --max $numfiles --current $i
+    # Update counter
+    ((i=i+1))
 done
 vramsteg --remove

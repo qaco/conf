@@ -117,14 +117,12 @@ export COLORTERM=truecolor
 export TERM=xterm-direct
 
 if tty | grep -q 'tty'; then
-    alias emacsclient="TERM=xterm-256color emacsclient -c --alternate-editor= "
-    alias emacs="TERM=xterm-256color emacs"
+    alias emacsclient="TERM=xterm-256color emacsclient -nw -c --alternate-editor= "
+    alias emacs="TERM=xterm-256color emacsclient -nw -c --alternate-editor= "
 else
-    alias emacsclient="emacsclient -c --alternate-editor= "
+    alias emacsclient="emacsclient -nw -c --alternate-editor= "
+    alias emacs="emacsclient -nw -c --alternate-editor= "
 fi
-
-alias emacsclient="emacsclient -nw"
-alias emacs="emacsclient"
 
 export VISUAL="emacs"
 export EDITOR="$VISUAL"
@@ -132,6 +130,7 @@ export EDITOR="$VISUAL"
 alias mc="TERM=xterm-256color mc"
 alias neomutt="TERM=xterm-256color neomutt"
 
+export PATH=$PATH:/sbin/
 export PATH=$PATH:~/src/naivecalendar/src/
 export PATH=$PATH:~/conf/scripts/
 export PATH=$PATH:~/src/tensorflow-2.12.0/bazel-out/k8-opt/bin/tensorflow/compiler/mlir/
