@@ -116,6 +116,8 @@ fi
 export COLORTERM=truecolor
 export TERM=xterm-direct
 
+export VISUAL="emacs -nw"
+export EDITOR="$VISUAL"
 if tty | grep -q 'tty'; then
     alias emacsclient="TERM=xterm-256color emacsclient -nw -c --alternate-editor= "
     alias emacs="TERM=xterm-256color emacsclient -nw -c --alternate-editor= "
@@ -123,9 +125,6 @@ else
     alias emacsclient="emacsclient -nw -c --alternate-editor= "
     alias emacs="emacsclient -nw -c --alternate-editor= "
 fi
-
-export VISUAL="emacs"
-export EDITOR="$VISUAL"
 
 alias mc="TERM=xterm-256color mc"
 alias neomutt="TERM=xterm-256color neomutt"

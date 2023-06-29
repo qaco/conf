@@ -54,6 +54,7 @@
     (message "Aborting")))
 
 ;; Mode-line
+
 (setq-default mode-line-buffer-identification
   (propertized-buffer-identification "%b"))
 (defun shorten-directory (dir)
@@ -153,30 +154,31 @@
 (require 'buffer-move)
 
 ;; display informations
-(global-set-key (kbd "C-<f5>") 'display-fill-column-indicator-mode)
-(global-set-key (kbd "C-x l") 'linum-mode)
+(global-set-key (kbd "C-x \"") 'display-fill-column-indicator-mode)
+(global-set-key (kbd "C-x l") 'display-line-numbers-mode)
 (global-set-key (kbd "M-l") 'count-lines-page)
 
 ;; edit
-;; (global-set-key (kbd "C-y") 'yank-and-indent)
 (global-set-key (kbd "C-a") 'smarter-beginning-of-line)
 (global-set-key (kbd "C-<return>") 'newline-above)
-(global-set-key (kbd "C-x <down>") 'reverse-region)
 (global-set-key (kbd "C-w") 'kill-region-or-line)
 (global-set-key (kbd "M-w") 'copy-region-or-line)
 (global-set-key (kbd "M-_") 'undo-only)
 (global-set-key (kbd "C-:") 'dabbrev-expand)
 
 ;; manage windows
+(global-set-key (kbd "C-x n") 'switch-to-next-buffer)
+(global-set-key (kbd "C-x p") 'switch-to-prev-buffer)
 (windmove-default-keybindings) ; S-arrow pour naviger
-(global-set-key (kbd "<f5>") 'split-window-horizontally)
-(global-set-key (kbd "<f6>") 'split-window-vertically)
+(global-set-key (kbd "C-x N") 'other-window)
+(global-set-key (kbd "C-x P") 'myprecious-window)
+;; (global-set-key (kbd "C-x P") 'windmove-left)
 (global-set-key (kbd "<C-S-up>")     'buf-move-up)
 (global-set-key (kbd "<C-S-down>")   'buf-move-down)
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
-(global-set-key (kbd "C-x k")  'kill-current-buffer)
-(global-set-key (kbd "C-x C-k")  'kill-other-buffers)
+;; (global-set-key (kbd "<f5>") 'split-window-horizontally)
+;; (global-set-key (kbd "<f6>") 'split-window-vertically)
 
 ;; manage files
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)

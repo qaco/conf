@@ -97,6 +97,10 @@ char nor indentation (doesn't save anything if blank line.)"
       (copy-region-as-kill (mark) (point))
     (wise-copy-line nil)))
 
+(defun myprevious-window ()
+    (interactive)
+    (other-window -1))
+
 (defun llvm-cout ()
   (interactive)
   (insert "std::error_code err;\n")

@@ -1,6 +1,10 @@
 #! /bin/bash
 
+rm ~/.bashrc
+rm ~/.profile
+
 ln -s .bashrc ~/.bashrc
+ln -s .profile ~/.profile
 ln -s .emacs.d/init/.emacs ~/.emacs
 ln -s conf/.emacs.d/ .emacs.d
 
