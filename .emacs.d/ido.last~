@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/hpompougnac/src/mlir-rt/mlir-lus/Dialects/" . "Lus/")
  ("/home/hpompougnac/bin/llvm/include/mlir/Dialect/MemRef/" . "IR/")
  ("/home/hpompougnac/bin/llvm/include/mlir/Dialect/" . "MemRef/")
  ("/home/hpompougnac/bin/llvm/include/mlir/" . "IR/")
@@ -16,10 +17,10 @@
  ("/home/hpompougnac/src/llvm-project-16.0.5.src/mlir/" . "lib/")
  ("/home/hpompougnac/src/llvm-project-16.0.5.src/" . "mlir/")
  ("/home/hpompougnac/src/mlir-rt/mlir-lus/Tools/" . "tmp/")
- ("/home/hpompougnac/src/mlir-rt/mlir-lus/" . "Tools/")
+ ("/home/hpompougnac/src/mlir-rt/mlir-lus/" . "Dialects/")
  ("/home/hpompougnac/src/mlir-rt/" . "mlir-lus/")
  ("/home/hpompougnac/src/" . "llvm-project-16.0.5.src/")
- ("/home/hpompougnac/conf/.emacs.d/" . "init/")
+ ("/home/hpompougnac/conf/.emacs.d/" . "elisp/")
  ("/home/hpompougnac/conf/.emacs.d/init/" . "parts/")
  ("/home/" . "hpompougnac/")
  ("/home/hpompougnac/conf/rofi/" . "themes/")
@@ -30,13 +31,17 @@
  ("/home/hpompougnac/.neomutt/" . "com.gmail.officiel/")
  ("/home/hpompougnac/.emacs.d/init/" . "parts/")
  ("/home/hpompougnac/.emacs.d/" . "elisp/")
- ("/home/hpompougnac/conf/" . "i3/")
+ ("/home/hpompougnac/conf/" . ".emacs.d/")
  ("/home/hpompougnac/.config/" . "picom/")
  ("/home/hpompougnac/" . "conf/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/hpompougnac/src/mlir-rt/mlir-lus/Dialects/Lus/"
+ "/home/hpompougnac/conf/.emacs.d/elisp/"
+ "/home/hpompougnac/src/mlir-rt/mlir-lus/"
+ "/home/hpompougnac/conf/.emacs.d/init/"
  "/home/hpompougnac/conf/scripts/"
  "/home/hpompougnac/conf/"
  "/home/hpompougnac/conf/i3/"
@@ -49,10 +54,7 @@
  "/home/hpompougnac/src/llvm-project-16.0.5.src/mlir/lib/Conversion/ComplexToStandard/"
  "/home/hpompougnac/src/llvm-project-16.0.5.src/mlir/test/lib/Conversion/FuncToLLVM/"
  "/home/hpompougnac/src/mlir-rt/mlir-lus/Tools/tmp/"
- "/home/hpompougnac/src/mlir-rt/mlir-lus/"
- "/home/hpompougnac/conf/.emacs.d/init/"
  "/home/hpompougnac/conf/.emacs.d/init/parts/"
- "/home/hpompougnac/conf/.emacs.d/elisp/"
  "/home/hpompougnac/.emacs.d/init/parts/"
  "/home/hpompougnac/.playlists/"
  "/home/hpompougnac/conf/conky/"
@@ -74,31 +76,43 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "NodeTest.cpp"
+ "Yield.cpp"
+ "Yield.h"
+ "NodeTest.h"
+ "lus.cpp"
+ "extra-commands.el"
+ "Makefile"
+ ".emacs"
  "arrows.sh"
  ".profile"
- "config"
- "extra-commands.el"
- ".emacs"
- "test.mlir"
- "mlir-prime.cpp"
- "Bypass.h"
- "MemrefBypass.cpp"
- "Makefile"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/hpompougnac/conf/scripts/" (25751 1446 400496 741000) "arrows.sh" "playdir.sh" "init_keys.sh" "tom3u.sh" "../" "tomp3.sh" "init_keys.sh~" "./")
+ ("/home/hpompougnac/src/mlir-rt/mlir-lus/Dialects/Lus/" (25764 26895 595201 319000) "OutputOp.cpp" "WhenOp.cpp" "OnClockOp.h" "WhenOp.h" "OnClockNodeOp.h" "OnClockOp.o" "Yield.cpp" "Yield.h" "KPeriodicOp.h" "ClockAnnotation.cpp" "PreOp.o" "PreOp.h" "lus.cpp" "NodeTest.o" "InitOp.cpp" "FbyOp.h" "../" "KPeriodicOp.o" "KPeriodic.cpp" "OnClockNodeOp.o" "YieldType.h" "ClockAnnotation.o" "Clocking/" "OutputOp.o" "FbyOp.o" "InstanceTest.h" "MergeOp.o" "WhenOp.o" "KPeriodicOp.cpp" "InstanceTest.cpp" "ClockAnnotation.h" "PreOp.cpp" "./" "ClockingLegacy/" "TestCondition.o" "TestCondition.h" "OnClockNodeOp.cpp" "MergeOp.cpp" "ClockType.h" "KPeriodic.h" "lus.o" "InitOp.o" "WhenType.h" "KPeriodic.o" "NodeTest.h" "OnClockOp.cpp" "NodeTest.cpp" "OutputOp.h" "InitOp.h" "lus.h" "MergeOp.h" "InstanceTest.o" "TestCondition.cpp" "FbyOp.cpp" "Yield.o")
+
+ ("/home/hpompougnac/src/mlir-rt/mlir-lus/" (25764 24116 636396 970000) "Transforms/" "test.memref-copy.mlir" "testa.lus.mlir" "Tools/" "Makefile.config.example" "samples/" "../" ".gitignore" "Makefile.bkp" "libs.config" "ccode.config" "./" "mlirlus" "test.lus.mlir" "Makefile" "Dialects/" "depend.config" "depend.config.bak")
+
+ ("/home/hpompougnac/conf/.emacs.d/elisp/" (25756 30855 862321 910000) "mlir-mode.el" "../" "extra-commands.el~" "heptagon-mode.el" "./" "extra-commands.el" "dired-setup.el" "tablegen-mode.el")
+
+ ("/home/hpompougnac/conf/.emacs.d/init/" (25756 31251 682046 685000) "../" ".emacs" ".emacs~" "./" "my-caml.el")
+
+ ("/home/hpompougnac/conf/.emacs.d/" (25763 20381 105552 783000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "ido.last~" "eln-cache/" "backups/")
+
+ ("/home/hpompougnac/conf/" (25757 11544 557625 678000) ".profile~" "conky/" "../" ".gitignore" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/" "i3status/")
+
+ ("/home/hpompougnac/" (25764 19785 337183 47000) "core" ".scripts/" ".nmcli-history" ".basrhc" ".cache/" ".local/" ".lesshst" ".profile~" ".naivecalendar_events/" "Images/" ".bash_history-88148.tmp" "Téléchargements/" "Documents/" ".xbindkeysrc" ".gnome/" ".terminfo/" "src/" ".npm/" ".neomutt/" "../" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".bashrc" ".pki/" ".bash_logout" "GOG Games/" ".xinitrc~" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "stream-demux.dump" "Musique/" ".playlists/" ".mplayer/" ".emacs" "cat" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" ".gitconfig" ".newsboat/" ".xbindkeysrc~" ".profile" "go/" ".emacs.d/" ".Xauthority" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".yarn/" ".nvidia-settings-rc" ".sudo_as_admin_successful" ".fonts/")
+
+ ("/home/hpompougnac/src/mlir-rt/mlir-lus/Dialects/" (25755 8288 79260 432000) "Lus/" "../" "FunctionImplementation.cpp" "ParserAux.cpp" "Sync/" "./" "MinMaxOperands.h" "FunctionImplementation.h" "ParserAux.h")
+
+ ("/home/hpompougnac/conf/scripts/" (25756 34971 145425 355000) "arrows.sh" "playdir.sh" "init_keys.sh" "tom3u.sh" "../" "tomp3.sh" "init_keys.sh~" "./")
 
  ("/home/hpompougnac/conf/i3/" (25751 12087 192370 480000) "conky-i3bar" "config" "keymap.conf" "../" "./")
-
- ("/home/hpompougnac/conf/" (25750 64886 441060 468000) ".profile~" "conky/" "../" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/" "i3status/")
 
  ("/home/hpompougnac/.emacs.d/elisp/" (25736 52522 421256 643000) "mlir-mode.el" "../" "heptagon-mode.el" "./" "extra-commands.el" "dired-setup.el" "tablegen-mode.el")
 
  ("/home/hpompougnac/.emacs.d/" (25755 28429 208704 201000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "ido.last~" "eln-cache/" "backups/")
-
- ("/home/hpompougnac/" (25756 29295 337795 241000) "core" ".scripts/" ".nmcli-history" ".cache/" ".local/" ".lesshst" ".profile~" ".naivecalendar_events/" "Images/" ".bash_history-88148.tmp" "Téléchargements/" "Documents/" ".xbindkeysrc" ".gnome/" ".terminfo/" "src/" ".npm/" ".neomutt/" "../" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".bashrc" ".pki/" ".bash_logout" "GOG Games/" ".xinitrc~" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "stream-demux.dump" "Musique/" ".playlists/" ".mplayer/" ".emacs" "cat" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" ".gitconfig" ".newsboat/" ".xbindkeysrc~" ".profile" "go/" ".emacs.d/" ".Xauthority" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".yarn/" ".nvidia-settings-rc" ".sudo_as_admin_successful" ".fonts/")
 
  ("/home/hpompougnac/src/mlir-sandbox/mlir-prime/" (25755 18043 479918 455000) "MemrefBypass.cpp" "MemrefCopyInliningPass.cpp" "MemrefBypass.cpp~" "MemrefBypass.o" "mlir-prime.cpp" "../" "mlir-prime.o" "mlir-prime.cpp~" "MemrefCopyInliningPass.cpp~" "libs.config" "./" "mlir-prime" "Makefile" "Bypass.h~" "Bypass.h")
 
@@ -144,19 +158,11 @@
 
  ("/home/hpompougnac/src/mlir-rt/mlir-lus/Tools/" (25755 8288 83260 587000) "mlir-lus.o" "mlir-lus.cpp" "mlir-prime.cpp" "../" "tmp/" "./" "mlir-lus-bkp.cpp")
 
- ("/home/hpompougnac/src/mlir-rt/mlir-lus/" (25755 8288 91260 896000) "Transforms/" "test.memref-copy.mlir" "testa.lus.mlir" "Tools/" "Makefile.config.example" "samples/" "../" ".gitignore" "Makefile.bkp" "libs.config" "ccode.config" "./" "test.lus.mlir" "Makefile" "Dialects/" "depend.config")
-
  ("/home/hpompougnac/src/mlir-rt/" (25732 30025 201003 201000) "presentations/" "mlir-emacs-mode.el" "../" ".gitignore" "keras-lus/" "thesis/" "papers/" "projects/" "markdown-mode.el" "./" "usecases/" ".git/" ".gitmodules" "iree/" "sandbox/" "llvm-build/" "README.md" "scripts/" "INSTALL.md" "INVOCATION.md" "mlir-lus/")
 
  ("/home/hpompougnac/src/" (25755 7689 711729 245000) "base16-i3/" "nchat/" "base16-tilix/" "usbmount/" "../" "tensorflow-2.12.0.tar.gz" "naivecalendar/" ".bashrc" "genbenchs/" "Polygeist/" "./" "llvm-project-16.0.5.src.tar.xz" "bypass_paywalls_clean-3.1.8.0.xpi" "mlir-rt/" "llvm-project-16.0.5.src/" "st/" "stream-labs-desktop/" "mlir-sandbox/" "tensorflow-2.12.0/" "alacritty/" "bypass-paywalls-firefox-clean-v3.1.8.0/")
 
  ("/home/hpompougnac/src/mlir-sandbox/" (25755 8091 735075 948000) "matmul/" "../" ".gitignore" "transform/" "packing/" "./" ".git/" "mlir-prime/" "README.md")
-
- ("/home/hpompougnac/conf/.emacs.d/init/" (25750 56241 187239 16000) "../" ".emacs" "./" "my-caml.el")
-
- ("/home/hpompougnac/conf/.emacs.d/" (25750 12624 67238 618000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "ido.last~" "eln-cache/" "backups/")
-
- ("/home/hpompougnac/conf/.emacs.d/elisp/" (25732 19137 272685 47000) "mlir-mode.el" "menhir-mode.el" "../" "auto-close-shell.el" "smarter-edition.el" "heptagon-mode.el" "./" "extra-commands.el" "dired-setup.el" "fill-column-indicator.el" "tablegen-mode.el")
 
  ("/home/hpompougnac/conf/.emacs.d/init/parts/" (25736 51068 171808 57000) "filesystem.el" "../" "my-packages.el" "nw.el" "shortcuts.el" "./" "appearence.el~" "default-behaviours.el" "appearence.el" "my-caml.el")
 

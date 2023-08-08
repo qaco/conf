@@ -178,23 +178,23 @@ set $base0E #c678dd
 set $base0F #be5046
 
 # Basic bar configuration using the Base16 variables.
-bar {
-    separator_symbol " "
-    status_command $HOME/.config/i3/conky-i3bar
+# bar {
+#     separator_symbol " "
+#     status_command $HOME/.config/i3/conky-i3bar
 
-    colors {
-        background $base00
-        separator  $base01
-        statusline $base04
+#     colors {
+#         background $base00
+#         separator  $base01
+#         statusline $base04
 
-        # State             Border  BG      Text
-        focused_workspace   $base0D $base0D $base00
-        active_workspace    $base0D $base03 $base00
-        inactive_workspace  $base03 $base01 $base05
-        urgent_workspace    $base08 $base08 $base00
-        binding_mode        $base00 $base0A $base00
-    }
-}
+#         # State             Border  BG      Text
+#         focused_workspace   $base0D $base0D $base00
+#         active_workspace    $base0D $base03 $base00
+#         inactive_workspace  $base03 $base01 $base05
+#         urgent_workspace    $base08 $base08 $base00
+#         binding_mode        $base00 $base0A $base00
+#     }
+# }
 
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator Child Border
@@ -206,11 +206,14 @@ client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
 # Load a random wallpaper
-exec --no-startup-id feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)
+# TODO
+# exec --no-startup-id feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)
+# exec --no-startup-id feh --bg-fill /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/gq024pf2rbf41.png
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i $(cat /tmp/bg.txt)
-# exec "xautolock -detectsleep -time 15 -locker \"i3lock --image=$(cat /tmp/bg.txt)\""
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i $(cat /tmp/bg.txt)
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/gq024pf2rbf41.png
 
 # Compositor
 # exec --no-startup-id picom
@@ -256,5 +259,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym $mod+z exec arrows.sh
 exec --no-startup-id init_keys.sh
 
+# TODO
 bindsym $mod+x exec --no-startup-id i3lock -i $(cat /tmp/bg.txt)
 bindsym $mod+Shift+x exec --no-startup-id shutdown now

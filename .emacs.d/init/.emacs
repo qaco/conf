@@ -171,7 +171,7 @@
 (global-set-key (kbd "C-x p") 'switch-to-prev-buffer)
 (windmove-default-keybindings) ; S-arrow pour naviger
 (global-set-key (kbd "C-x N") 'other-window)
-(global-set-key (kbd "C-x P") 'myprecious-window)
+(global-set-key (kbd "C-x P") 'myprevious-window)
 ;; (global-set-key (kbd "C-x P") 'windmove-left)
 (global-set-key (kbd "<C-S-up>")     'buf-move-up)
 (global-set-key (kbd "<C-S-down>")   'buf-move-down)
