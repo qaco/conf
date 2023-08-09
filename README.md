@@ -1,6 +1,17 @@
 # Debian installation
 
-## TODO
+## Desktop environment
+
+### Mate + i3
+
+Change ```org -> mate -> desktop -> session -> required-components``` from
+```marco``` to ```i3```.
+
+In ```org -> mate -> desktop -> session -> required-component-list```, delete:
+* ```filemanager``` (otherwise the background window will cover everything)
+* ```panel``` (if you want zero panel)
+
+## Console
 
 ### Color in tty
 
@@ -10,8 +21,6 @@ but the same command, in GUI, breaks colors.
 Need a conditional alias using (I guess)
 ```tty | grep tty > /dev/null && alias emacsclient="TERM=xterm-256color emacsclient"```
 
-## Console
-
 ### Choose an emulator
 
 Tilix is a good compromise:
@@ -19,6 +28,8 @@ Tilix is a good compromise:
 * It provides 256 colors.
 * It really supports Unicode.
 * But it depends on GTk3 and does not provide a text configuration file.
+
+I prefer mate-terminal (but it is part of the Mate desktop environment).
 
 In comparison:
 * kitty does not work well with emacs in console.
