@@ -11,6 +11,10 @@ In ```org -> mate -> desktop -> session -> required-component-list```, delete:
 * ```filemanager``` (otherwise the background window will cover everything)
 * ```panel``` (if you want zero panel)
 
+### Picom
+
+Identify class_g of a window : ```xprop WM_CLASS```
+
 ## Console
 
 ### Color in tty

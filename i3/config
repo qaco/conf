@@ -12,8 +12,7 @@
 set $mod Mod4
 
 font pango:monospace
-
-
+gaps inner 15
 
 # NetworkManager applet
 exec --no-startup-id nm-applet
@@ -124,7 +123,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -207,8 +206,8 @@ client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
 # Load a random wallpaper
-# exec --no-startup-id feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)
-exec --no-startup-id feh --bg-fill /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/sw_tbtt_mountain.png
+exec --no-startup-id feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)
+# exec --no-startup-id feh --bg-fill /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/sw_tbtt_mountain.png
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -218,6 +217,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i /home/
 # Compositor
 # exec --no-startup-id picom
 # Avoid screen tearing
+exec_always --no-startup-id picom
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
 # Print screen
@@ -239,7 +239,7 @@ bindsym $mod+Shift+Return exec emacsclient -c
 bindsym $mod+c exec naivecalendar.sh -t onedark
 # App launcher
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
-
+bindsym $mod+Shift+c exec "feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)"
 # Music
 
 # VLC
@@ -260,11 +260,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym $mod+z exec arrows.sh
 exec --no-startup-id init_keys.sh
 
-# TODO
 # bindsym $mod+x exec --no-startup-id i3lock -i $(cat /tmp/bg.txt)
 bindsym $mod+x exec --no-startup-id i3lock -i /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/sw_tbtt_mountain.png
 bindsym $mod+Shift+x exec --no-startup-id shutdown now
-
-
-
-gaps inner 10
