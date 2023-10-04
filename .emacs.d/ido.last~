@@ -31,13 +31,14 @@
  ("/home/hpompougnac/.neomutt/" . "com.gmail.officiel/")
  ("/home/hpompougnac/.emacs.d/init/" . "parts/")
  ("/home/hpompougnac/.emacs.d/" . "elisp/")
- ("/home/hpompougnac/conf/" . "i3/")
+ ("/home/hpompougnac/conf/" . "scripts/")
  ("/home/hpompougnac/.config/" . "picom/")
  ("/home/hpompougnac/" . "conf/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/hpompougnac/conf/scripts/"
  "/home/hpompougnac/conf/i3/"
  "/home/hpompougnac/conf/"
  "/home/hpompougnac/.config/picom/"
@@ -47,7 +48,6 @@
  "/home/hpompougnac/conf/.emacs.d/elisp/"
  "/home/hpompougnac/src/mlir-rt/mlir-lus/"
  "/home/hpompougnac/conf/.emacs.d/init/"
- "/home/hpompougnac/conf/scripts/"
  "/home/hpompougnac/.emacs.d/elisp/"
  "/home/hpompougnac/src/mlir-sandbox/mlir-prime/"
  "/home/hpompougnac/bin/llvm/include/mlir/IR/"
@@ -77,20 +77,24 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "playing.sh"
+ "i3bar.conky.conf"
  "config"
+ "conky-i3bar"
+ "init_keys.sh"
+ "arrows.sh"
+ "caps.sh"
  "install.sh"
  "README.md"
  "picom.conf.bkp"
- "picom.conf"
- ".emacs"
- "one-dark.json"
- "mate-term-atom.sh"
- "conky-i3bar"
- "i3bar.conky.conf"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/hpompougnac/conf/scripts/" (25812 27826 337382 204000) "arrows.sh" "playdir.sh" "init_keys.sh" "tom3u.sh" "../" "tomp3.sh" "playing.sh" "init_keys.sh~" "./" "playing.sh~")
+
+ ("/home/hpompougnac/conf/i3/" (25819 35071 977493 979000) "conky-i3bar" "config" "../" "i3bar.conky.conf~" "i3bar.conky.conf" "./")
+
  ("/home/hpompougnac/conf/" (25812 19803 696827 971000) ".profile~" "tilix/" "../" ".gitignore" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/")
 
  ("/home/hpompougnac/" (25812 16107 905393 957000) "core" ".scripts/" ".nmcli-history" ".basrhc" ".cache/" ".local/" ".lesshst" ".profile~" ".naivecalendar_events/" "Images/" ".bash_history-88148.tmp" "Téléchargements/" "Modèles/" "Documents/" ".xbindkeysrc" ".gnome/" ".icons/" ".terminfo/" "src/" ".npm/" ".neomutt/" "../" ".nv/" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".themes/" ".bashrc" ".pki/" ".bash_logout" "GOG Games/" ".xinitrc~" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "stream-demux.dump" "Musique/" ".playlists/" ".mplayer/" ".emacs" "cat" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" "Vidéos/" ".gitconfig" ".newsboat/" ".xbindkeysrc~" ".profile" ".sane/" "go/" ".emacs.d/" ".Xauthority" "Public/" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".yarn/" ".nvidia-settings-rc" ".sudo_as_admin_successful" ".fonts/")
@@ -98,8 +102,6 @@
  ("/home/hpompougnac/.config/" (25811 39338 748901 329000) "mimeapps.list" "pluma/" "tilix/" "procps/" "vlc/" "conky/" "../" "dconf/" "cef_user_data/" "caja/" "naivecalendar/" "pulse/" "libreoffice/" "fontconfig/" "mc/" "atril/" "gtk-3.0/" "enchant/" "easytag/" "GIMP/" "rofi/" "xfce4/" "newsboat/" "./" "yelp/" "lxterminal/" "simple-scan/" "user-dirs.dirs" "autokey/" "scribus/" "abiword/" "mate-session/" "pipewire-media-session/" "kitty/" "mate/" "menus/" "gtk-2.0/" "user-dirs.locale" "alacritty/" "i3/" "picom/" "QtProject.conf" "Thunar/" "i3status/")
 
  ("/home/hpompougnac/.config/picom/" (25812 19406 25525 231000) "../" "picom.conf.bkp" "./" "picom.conf" "picom.conf~")
-
- ("/home/hpompougnac/conf/i3/" (25811 11017 66785 597000) "conky-i3bar" "config" "../" "i3bar.conky.conf~" "i3bar.conky.conf" "./" "i3bar.conky.conf.bkp")
 
  ("/home/hpompougnac/conf/tilix/" (25811 9641 127714 63000) "../" "./" "one-dark.json" "mate-term-atom.sh")
 
@@ -114,8 +116,6 @@
  ("/home/hpompougnac/conf/.emacs.d/" (25763 20381 105552 783000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "ido.last~" "eln-cache/" "backups/")
 
  ("/home/hpompougnac/src/mlir-rt/mlir-lus/Dialects/" (25755 8288 79260 432000) "Lus/" "../" "FunctionImplementation.cpp" "ParserAux.cpp" "Sync/" "./" "MinMaxOperands.h" "FunctionImplementation.h" "ParserAux.h")
-
- ("/home/hpompougnac/conf/scripts/" (25756 34971 145425 355000) "arrows.sh" "playdir.sh" "init_keys.sh" "tom3u.sh" "../" "tomp3.sh" "init_keys.sh~" "./")
 
  ("/home/hpompougnac/.emacs.d/elisp/" (25736 52522 421256 643000) "mlir-mode.el" "../" "heptagon-mode.el" "./" "extra-commands.el" "dired-setup.el" "tablegen-mode.el")
 

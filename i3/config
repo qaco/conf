@@ -206,7 +206,7 @@ client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
 # Load a random wallpaper
-exec --no-startup-id feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)
+exec --no-startup-id feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee -a /tmp/bg.txt)
 # exec --no-startup-id feh --bg-fill /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/sw_tbtt_mountain.png
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
@@ -221,9 +221,9 @@ exec_always --no-startup-id picom
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
 # Print screen
-bindsym Print exec --no-startup-id maim "/tmp/$(date).png"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/tmp/$(date).png"
-bindsym Shift+Print exec --no-startup-id maim --select "/tmp/$(date).png"
+bindsym Shift+Print exec --no-startup-id maim "/tmp/$(date).png"
+bindsym Control+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/tmp/$(date).png"
+bindsym Print exec --no-startup-id maim --select "/tmp/$(date).png"
 
 # Browser
 bindsym $mod+w exec firefox
@@ -239,7 +239,7 @@ bindsym $mod+Shift+Return exec emacsclient -c
 bindsym $mod+c exec naivecalendar.sh -t onedark
 # App launcher
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
-bindsym $mod+Shift+c exec "feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee /tmp/bg.txt)"
+bindsym $mod+Shift+c exec "feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee -a /tmp/bg.txt)"
 # Music
 
 # VLC
@@ -263,3 +263,38 @@ exec --no-startup-id init_keys.sh
 # bindsym $mod+x exec --no-startup-id i3lock -i $(cat /tmp/bg.txt)
 bindsym $mod+x exec --no-startup-id i3lock -i /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/sw_tbtt_mountain.png
 bindsym $mod+Shift+x exec --no-startup-id shutdown now
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
