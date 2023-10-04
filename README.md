@@ -4,6 +4,8 @@
 
 ### Mate + i3
 
+In ```dconf-editor``` :
+
 Change ```org -> mate -> desktop -> session -> required-components``` from
 ```marco``` to ```i3```.
 
