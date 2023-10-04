@@ -1,5 +1,7 @@
 # Debian installation
 
+update-alternatives: utilisation de « /usr/bin/i3 » pour fournir « /usr/bin/x-window-manager
+
 ## Desktop environment
 
 ### Mate + i3
