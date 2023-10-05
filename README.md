@@ -1,8 +1,12 @@
 # Debian installation
 
+update-alternatives: utilisation de « /usr/bin/i3 » pour fournir « /usr/bin/x-window-manager
+
 ## Desktop environment
 
 ### Mate + i3
+
+In ```dconf-editor``` :
 
 Change ```org -> mate -> desktop -> session -> required-components``` from
 ```marco``` to ```i3```.
