@@ -1,0 +1,5 @@
+exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+exec --no-startup-id feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee -a /tmp/bg.txt)
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/sw_tbtt_mountain.png
+bindsym $mod+x exec --no-startup-id i3lock -i /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/sw_tbtt_mountain.png
+bindsym $mod+Shift+c exec "feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee -a /tmp/bg.txt)"
