@@ -38,6 +38,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/hpompougnac/conf/rofi/themes/"
  "/home/hpompougnac/conf/scripts/"
  "/home/hpompougnac/conf/i3/"
  "/home/hpompougnac/conf/"
@@ -62,7 +63,6 @@
  "/home/hpompougnac/conf/conky/"
  "/home/hpompougnac/conf/picom/"
  "/home/hpompougnac/.config/i3/"
- "/home/hpompougnac/conf/rofi/themes/"
  "/home/hpompougnac/.local/share/rofi/themes/"
  "/home/hpompougnac/.config/rofi/"
  "/home/hpompougnac/.neomutt/"
@@ -77,6 +77,8 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "onedark.rasi"
+ "onedark.rasi.bkp"
  "playing.sh"
  "i3bar.conky.conf"
  "config"
@@ -85,15 +87,17 @@
  "arrows.sh"
  "caps.sh"
  "install.sh"
- "README.md"
- "picom.conf.bkp"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/hpompougnac/conf/scripts/" (25812 27826 337382 204000) "arrows.sh" "playdir.sh" "init_keys.sh" "tom3u.sh" "../" "tomp3.sh" "playing.sh" "init_keys.sh~" "./" "playing.sh~")
+ ("/home/hpompougnac/src/mlir-sandbox/mlir-prime/" (25755 18916 223445 774000) "MemrefBypass.cpp" "MemrefCopyInliningPass.cpp" "MemrefBypass.o" "mlir-prime.cpp" "../" "mlir-prime.o" "libs.config" "./" "Makefile" "Bypass.h" "test.mlir")
 
- ("/home/hpompougnac/conf/i3/" (25819 35071 977493 979000) "conky-i3bar" "config" "../" "i3bar.conky.conf~" "i3bar.conky.conf" "./")
+ ("/home/hpompougnac/conf/i3/" (25885 8258 530173 17000) "conky-i3bar" "config" "../" "i3bar.conky.conf~" "i3bar.conky.conf" "./")
+
+ ("/home/hpompougnac/conf/rofi/themes/" (25885 5266 979780 856000) "onedark.rasi.bkp" "../" "onedark.rasi.bkp~" "onedark.rasi" "./")
+
+ ("/home/hpompougnac/conf/scripts/" (25812 27826 337382 204000) "arrows.sh" "playdir.sh" "init_keys.sh" "tom3u.sh" "../" "tomp3.sh" "playing.sh" "init_keys.sh~" "./" "playing.sh~")
 
  ("/home/hpompougnac/conf/" (25812 19803 696827 971000) ".profile~" "tilix/" "../" ".gitignore" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/")
 
@@ -120,8 +124,6 @@
  ("/home/hpompougnac/.emacs.d/elisp/" (25736 52522 421256 643000) "mlir-mode.el" "../" "heptagon-mode.el" "./" "extra-commands.el" "dired-setup.el" "tablegen-mode.el")
 
  ("/home/hpompougnac/.emacs.d/" (25755 28429 208704 201000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "ido.last~" "eln-cache/" "backups/")
-
- ("/home/hpompougnac/src/mlir-sandbox/mlir-prime/" (25755 18043 479918 455000) "MemrefBypass.cpp" "MemrefCopyInliningPass.cpp" "MemrefBypass.cpp~" "MemrefBypass.o" "mlir-prime.cpp" "../" "mlir-prime.o" "mlir-prime.cpp~" "MemrefCopyInliningPass.cpp~" "libs.config" "./" "mlir-prime" "Makefile" "Bypass.h~" "Bypass.h")
 
  ("/home/hpompougnac/bin/llvm/include/mlir/IR/" (25731 44624 208278 879000) "SubElementInterfaces.h" "ImplicitLocOpBuilder.h" "BuiltinTypes.cpp.inc" "TypeRange.h" "Operation.h" "RegionKindInterface.td" "OpAsmInterface.td" "BuiltinDialect.td" "OpDefinition.h" "BuiltinTypes.h" "SubElementAttrInterfaces.cpp.inc" "TensorEncoding.h" "BuiltinLocationAttributes.cpp.inc" "Verifier.h" "BuiltinDialect.h.inc" "Dominance.h" "TensorEncoding.td" "AffineMap.h" "TypeSupport.h" "BuiltinAttributes.td" "BuiltinAttributeInterfaces.td" "../" "OpAsmInterface.cpp.inc" "BuiltinAttributes.h" "SymbolInterfaces.td" "Visitors.h" "SymbolInterfaces.h.inc" "DialectImplementation.h" "DialectBase.td" "RegionKindInterface.h.inc" "PatternBase.td" "FunctionInterfaces.td" "EnumAttr.td" "RegionKindInterface.cpp.inc" "RegionGraphTraits.h" "PatternMatch.h" "AsmState.h" "DialectRegistry.h" "Location.h" "SubElementInterfaces.td" "AffineExprVisitor.h" "BuiltinDialect.cpp.inc" "IntegerSet.h" "BuiltinTypeInterfaces.h.inc" "SymbolTable.h" "BuiltinAttributes.cpp.inc" "FunctionOpInterfaces.h.inc" "MLIRContext.h" "Block.h" "OpAsmInterface.h.inc" "Value.h" "BuiltinTypes.h.inc" "SymbolInterfaces.cpp.inc" "OpBase.td" "BuiltinTypes.td" "OpImplementation.h" "TensorEncInterfaces.cpp.inc" "SubElementTypeInterfaces.cpp.inc" "./" "TensorEncInterfaces.h.inc" "Matchers.h" "BuiltinOps.td" "BuiltinAttributeInterfaces.h.inc" "BuiltinOps.h" "RegionKindInterface.h" "FunctionOpInterfaces.cpp.inc" "UseDefLists.h" "Types.h" "Dialect.h" "BlockSupport.h" "Attributes.h" "BuiltinTypeInterfaces.td" "BuiltinDialect.h" "FunctionImplementation.h" "AttributeSupport.h" "BuiltinLocationAttributes.h.inc" "Diagnostics.h" "TypeUtilities.h" "ExtensibleDialect.h" "BuiltinAttributeInterfaces.h" "IRMapping.h" "DialectInterface.h" "SubElementTypeInterfaces.h.inc" "Threading.h" "BuiltinOps.h.inc" "BuiltinLocationAttributes.td" "Builders.h" "AffineExpr.h" "BuiltinAttributeInterfaces.cpp.inc" "SubElementAttrInterfaces.h.inc" "BuiltinTypeInterfaces.h" "Region.h" "AttrTypeBase.td" "BuiltinOps.cpp.inc" "OperationSupport.h" "ValueRange.h" "BuiltinAttributes.h.inc" "FunctionInterfaces.h" "OwningOpRef.h" "DialectResourceBlobManager.h" "BuiltinTypeInterfaces.cpp.inc" "StorageUniquerSupport.h")
 
@@ -188,8 +190,6 @@
  ("/home/hpompougnac/conf/picom/" (25705 28930 544875 339000) "../" "./" "picom.conf")
 
  ("/home/hpompougnac/.config/i3/" (25704 49894 154605 691000) "conky-i3bar" "config" "../" "./")
-
- ("/home/hpompougnac/conf/rofi/themes/" (25705 17102 689609 937000) "../" "onedark.rasi" "./")
 
  ("/home/hpompougnac/conf/rofi/" (25705 17091 569063 765000) "../" "themes/" "./")
 
