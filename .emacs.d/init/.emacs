@@ -4,7 +4,8 @@
 
 (package-initialize)
 
-(setq load-path (append load-path '("~/.emacs.d/elisp")))
+(setq load-path (append load-path '("~/conf/.emacs.d/elisp")))
+;; (setq load-path (append load-path '("~/.emacs.d/elisp")))
 
 (add-to-list
  'package-archives
