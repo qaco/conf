@@ -233,8 +233,7 @@ bindsym $mod+Shift+w exec thunderbird
 # Terminal/emacs
 # bindsym $mod+Return exec tilix
 bindsym $mod+Return exec mate-terminal
-exec_always --no-startup-id guake
-bindsym $mod+Shift+Return exec emacsclient -c
+bindsym $mod+Shift+Return exec guake
 # Cal
 # bindsym $mod+c exec naivecalendar.sh -t onedark
 bindsym $mod+c exec zenity --calendar

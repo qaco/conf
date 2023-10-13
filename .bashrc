@@ -139,6 +139,7 @@ export PATH=$PATH:~/bin/llvm/bin/
 alias naivecalendar="naivecalendar.sh -t onedark"
 alias mvlc='nvlc -Z --no-metadata-network-access'
 alias cvlc='cvlc -Z --no-metadata-network-access'
+alias nterm='mate-terminal --window'
 
 # Reminder:
 
