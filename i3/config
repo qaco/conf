@@ -11,7 +11,6 @@
 
 set $mod Mod4
 
-include /home/hpompougnac/conf/i3/config-ext
 
 font pango:monospace
 gaps inner 15
@@ -267,3 +266,5 @@ exec --no-startup-id init_keys.sh
 
 # bindsym $mod+x exec --no-startup-id i3lock -i $(cat /tmp/bg.txt)
 bindsym $mod+Shift+x exec --no-startup-id shutdown now
+
+include /home/hpompougnac/conf/i3/config-ext
