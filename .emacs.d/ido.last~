@@ -2,6 +2,9 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/hpompougnac/src/projects/mlir-rt/papers/" . "abstract_clocks/")
+ ("/home/hpompougnac/src/projects/mlir-rt/" . "papers/")
+ ("/home/hpompougnac/src/projects/" . "mlir-rt/")
  ("/home/hpompougnac/src/mlir-rt/mlir-lus/Dialects/" . "Lus/")
  ("/home/hpompougnac/bin/llvm/include/mlir/Dialect/MemRef/" . "IR/")
  ("/home/hpompougnac/bin/llvm/include/mlir/Dialect/" . "MemRef/")
@@ -19,7 +22,7 @@
  ("/home/hpompougnac/src/mlir-rt/mlir-lus/Tools/" . "tmp/")
  ("/home/hpompougnac/src/mlir-rt/mlir-lus/" . "Dialects/")
  ("/home/hpompougnac/src/mlir-rt/" . "mlir-lus/")
- ("/home/hpompougnac/src/" . "llvm-project-16.0.5.src/")
+ ("/home/hpompougnac/src/" . "projects/")
  ("/home/hpompougnac/conf/.emacs.d/" . "elisp/")
  ("/home/hpompougnac/conf/.emacs.d/init/" . "parts/")
  ("/home/" . "hpompougnac/")
@@ -38,12 +41,13 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/hpompougnac/conf/rofi/themes/"
- "/home/hpompougnac/conf/scripts/"
  "/home/hpompougnac/conf/i3/"
  "/home/hpompougnac/conf/"
- "/home/hpompougnac/.config/picom/"
  "/home/hpompougnac/"
+ "/home/hpompougnac/src/projects/mlir-rt/papers/abstract_clocks/"
+ "/home/hpompougnac/conf/rofi/themes/"
+ "/home/hpompougnac/conf/scripts/"
+ "/home/hpompougnac/.config/picom/"
  "/home/hpompougnac/conf/tilix/"
  "/home/hpompougnac/src/mlir-rt/mlir-lus/Dialects/Lus/"
  "/home/hpompougnac/conf/.emacs.d/elisp/"
@@ -77,31 +81,43 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "config-home"
+ "config-inria"
+ "config"
+ ".bashrc"
+ ".basrhc"
+ "Makefile"
+ "main.tex"
  "onedark.rasi"
  "onedark.rasi.bkp"
  "playing.sh"
- "i3bar.conky.conf"
- "config"
- "conky-i3bar"
- "init_keys.sh"
- "arrows.sh"
- "caps.sh"
- "install.sh"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/hpompougnac/src/mlir-sandbox/mlir-prime/" (25755 18916 223445 774000) "MemrefBypass.cpp" "MemrefCopyInliningPass.cpp" "MemrefBypass.o" "mlir-prime.cpp" "../" "mlir-prime.o" "libs.config" "./" "Makefile" "Bypass.h" "test.mlir")
+ ("/home/hpompougnac/conf/i3/" (25909 17163 35864 850000) "config-home" "conky-i3bar" "config-inria" "config" "../" ".gitignore" "i3bar.conky.conf~" "i3bar.conky.conf" "./" "config-ext")
 
- ("/home/hpompougnac/conf/i3/" (25885 8258 530173 17000) "conky-i3bar" "config" "../" "i3bar.conky.conf~" "i3bar.conky.conf" "./")
+ ("/home/hpompougnac/conf/" (25892 61340 696369 160000) ".profile~" "tilix/" "../" ".gitignore" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/")
+
+ ("/home/hpompougnac/" (25895 62973 317244 124000) ".scripts/" ".nmcli-history" ".basrhc" ".cache/" ".local/" ".lesshst" ".profile~" ".naivecalendar_events/" "Images/" ".bash_history-88148.tmp" "Téléchargements/" "Modèles/" "Documents/" ".xbindkeysrc" ".gnome/" ".icons/" ".terminfo/" "src/" ".npm/" ".neomutt/" "../" ".nv/" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".themes/" ".bashrc" ".pki/" ".bash_logout" "GOG Games/" ".xinitrc~" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "Musique/" ".playlists/" ".mplayer/" ".emacs" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" "Vidéos/" ".gitconfig" ".newsboat/" ".xbindkeysrc~" ".profile" ".sane/" "go/" ".emacs.d/" ".Xauthority" "Public/" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".yarn/" ".nvidia-settings-rc" ".sudo_as_admin_successful" ".fonts/" ".texlive2022/")
+
+ ("/home/hpompougnac/src/articles/sheets/" (25895 64174 337392 562000) "backprop.tex~" "../" "./" ".git/" "backprop.tex")
+
+ ("/home/hpompougnac/src/projects/mlir-rt/papers/abstract_clocks/" (25895 7031 391149 107000) "dataflow2.tex" "Makefile~" "main.pdf" "../" "dataflow.tex" "algorithm.tex" ".gitignore" "dataflow.tex~" "draft.tex" "./" "main.log" "main.aux" "Makefile" "main.tex")
+
+ ("/home/hpompougnac/src/projects/mlir-rt/papers/" (25731 44781 340320 477000) "abstract_clocks/" "ssa-sync/" "mi-parcours/" "../" "ReactiveML/" "./" "pssa_spec.md" "poster/")
+
+ ("/home/hpompougnac/src/projects/mlir-rt/" (25732 30025 201003 201000) "presentations/" "mlir-emacs-mode.el" "../" ".gitignore" "keras-lus/" "thesis/" "papers/" "projects/" "markdown-mode.el" "./" "usecases/" ".git/" ".gitmodules" "iree/" "sandbox/" "llvm-build/" "README.md" "scripts/" "INSTALL.md" "INVOCATION.md" "mlir-lus/")
+
+ ("/home/hpompougnac/src/projects/" (25895 63869 649649 810000) "../" "genbenchs/" "./" "mlir-rt/" "mlir-sandbox/")
+
+ ("/home/hpompougnac/src/" (25895 63869 649649 810000) "utilities/" "../" ".bashrc" "projects/" "./" "articles/" "sandbox/" "upstream/")
+
+ ("/home/hpompougnac/src/articles/" (25895 64043 801701 952000) "../" "./" "sheets/" "genbenchs-article/")
 
  ("/home/hpompougnac/conf/rofi/themes/" (25885 5266 979780 856000) "onedark.rasi.bkp" "../" "onedark.rasi.bkp~" "onedark.rasi" "./")
 
  ("/home/hpompougnac/conf/scripts/" (25812 27826 337382 204000) "arrows.sh" "playdir.sh" "init_keys.sh" "tom3u.sh" "../" "tomp3.sh" "playing.sh" "init_keys.sh~" "./" "playing.sh~")
-
- ("/home/hpompougnac/conf/" (25812 19803 696827 971000) ".profile~" "tilix/" "../" ".gitignore" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/")
-
- ("/home/hpompougnac/" (25812 16107 905393 957000) "core" ".scripts/" ".nmcli-history" ".basrhc" ".cache/" ".local/" ".lesshst" ".profile~" ".naivecalendar_events/" "Images/" ".bash_history-88148.tmp" "Téléchargements/" "Modèles/" "Documents/" ".xbindkeysrc" ".gnome/" ".icons/" ".terminfo/" "src/" ".npm/" ".neomutt/" "../" ".nv/" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".themes/" ".bashrc" ".pki/" ".bash_logout" "GOG Games/" ".xinitrc~" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "stream-demux.dump" "Musique/" ".playlists/" ".mplayer/" ".emacs" "cat" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" "Vidéos/" ".gitconfig" ".newsboat/" ".xbindkeysrc~" ".profile" ".sane/" "go/" ".emacs.d/" ".Xauthority" "Public/" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".yarn/" ".nvidia-settings-rc" ".sudo_as_admin_successful" ".fonts/")
 
  ("/home/hpompougnac/.config/" (25811 39338 748901 329000) "mimeapps.list" "pluma/" "tilix/" "procps/" "vlc/" "conky/" "../" "dconf/" "cef_user_data/" "caja/" "naivecalendar/" "pulse/" "libreoffice/" "fontconfig/" "mc/" "atril/" "gtk-3.0/" "enchant/" "easytag/" "GIMP/" "rofi/" "xfce4/" "newsboat/" "./" "yelp/" "lxterminal/" "simple-scan/" "user-dirs.dirs" "autokey/" "scribus/" "abiword/" "mate-session/" "pipewire-media-session/" "kitty/" "mate/" "menus/" "gtk-2.0/" "user-dirs.locale" "alacritty/" "i3/" "picom/" "QtProject.conf" "Thunar/" "i3status/")
 
@@ -124,6 +140,8 @@
  ("/home/hpompougnac/.emacs.d/elisp/" (25736 52522 421256 643000) "mlir-mode.el" "../" "heptagon-mode.el" "./" "extra-commands.el" "dired-setup.el" "tablegen-mode.el")
 
  ("/home/hpompougnac/.emacs.d/" (25755 28429 208704 201000) "README.org" "transient/" "opam-user-setup.el" "../" ".gitignore" "smex-items" "recentf" "init/" "auto-save-list/" "elpa/" "ido.last" "themes/" "./" "elisp/" "ido.last~" "eln-cache/" "backups/")
+
+ ("/home/hpompougnac/src/mlir-sandbox/mlir-prime/" (25755 18043 479918 455000) "MemrefBypass.cpp" "MemrefCopyInliningPass.cpp" "MemrefBypass.cpp~" "MemrefBypass.o" "mlir-prime.cpp" "../" "mlir-prime.o" "mlir-prime.cpp~" "MemrefCopyInliningPass.cpp~" "libs.config" "./" "mlir-prime" "Makefile" "Bypass.h~" "Bypass.h")
 
  ("/home/hpompougnac/bin/llvm/include/mlir/IR/" (25731 44624 208278 879000) "SubElementInterfaces.h" "ImplicitLocOpBuilder.h" "BuiltinTypes.cpp.inc" "TypeRange.h" "Operation.h" "RegionKindInterface.td" "OpAsmInterface.td" "BuiltinDialect.td" "OpDefinition.h" "BuiltinTypes.h" "SubElementAttrInterfaces.cpp.inc" "TensorEncoding.h" "BuiltinLocationAttributes.cpp.inc" "Verifier.h" "BuiltinDialect.h.inc" "Dominance.h" "TensorEncoding.td" "AffineMap.h" "TypeSupport.h" "BuiltinAttributes.td" "BuiltinAttributeInterfaces.td" "../" "OpAsmInterface.cpp.inc" "BuiltinAttributes.h" "SymbolInterfaces.td" "Visitors.h" "SymbolInterfaces.h.inc" "DialectImplementation.h" "DialectBase.td" "RegionKindInterface.h.inc" "PatternBase.td" "FunctionInterfaces.td" "EnumAttr.td" "RegionKindInterface.cpp.inc" "RegionGraphTraits.h" "PatternMatch.h" "AsmState.h" "DialectRegistry.h" "Location.h" "SubElementInterfaces.td" "AffineExprVisitor.h" "BuiltinDialect.cpp.inc" "IntegerSet.h" "BuiltinTypeInterfaces.h.inc" "SymbolTable.h" "BuiltinAttributes.cpp.inc" "FunctionOpInterfaces.h.inc" "MLIRContext.h" "Block.h" "OpAsmInterface.h.inc" "Value.h" "BuiltinTypes.h.inc" "SymbolInterfaces.cpp.inc" "OpBase.td" "BuiltinTypes.td" "OpImplementation.h" "TensorEncInterfaces.cpp.inc" "SubElementTypeInterfaces.cpp.inc" "./" "TensorEncInterfaces.h.inc" "Matchers.h" "BuiltinOps.td" "BuiltinAttributeInterfaces.h.inc" "BuiltinOps.h" "RegionKindInterface.h" "FunctionOpInterfaces.cpp.inc" "UseDefLists.h" "Types.h" "Dialect.h" "BlockSupport.h" "Attributes.h" "BuiltinTypeInterfaces.td" "BuiltinDialect.h" "FunctionImplementation.h" "AttributeSupport.h" "BuiltinLocationAttributes.h.inc" "Diagnostics.h" "TypeUtilities.h" "ExtensibleDialect.h" "BuiltinAttributeInterfaces.h" "IRMapping.h" "DialectInterface.h" "SubElementTypeInterfaces.h.inc" "Threading.h" "BuiltinOps.h.inc" "BuiltinLocationAttributes.td" "Builders.h" "AffineExpr.h" "BuiltinAttributeInterfaces.cpp.inc" "SubElementAttrInterfaces.h.inc" "BuiltinTypeInterfaces.h" "Region.h" "AttrTypeBase.td" "BuiltinOps.cpp.inc" "OperationSupport.h" "ValueRange.h" "BuiltinAttributes.h.inc" "FunctionInterfaces.h" "OwningOpRef.h" "DialectResourceBlobManager.h" "BuiltinTypeInterfaces.cpp.inc" "StorageUniquerSupport.h")
 
@@ -168,8 +186,6 @@
  ("/home/hpompougnac/src/mlir-rt/mlir-lus/Tools/" (25755 8288 83260 587000) "mlir-lus.o" "mlir-lus.cpp" "mlir-prime.cpp" "../" "tmp/" "./" "mlir-lus-bkp.cpp")
 
  ("/home/hpompougnac/src/mlir-rt/" (25732 30025 201003 201000) "presentations/" "mlir-emacs-mode.el" "../" ".gitignore" "keras-lus/" "thesis/" "papers/" "projects/" "markdown-mode.el" "./" "usecases/" ".git/" ".gitmodules" "iree/" "sandbox/" "llvm-build/" "README.md" "scripts/" "INSTALL.md" "INVOCATION.md" "mlir-lus/")
-
- ("/home/hpompougnac/src/" (25755 7689 711729 245000) "base16-i3/" "nchat/" "base16-tilix/" "usbmount/" "../" "tensorflow-2.12.0.tar.gz" "naivecalendar/" ".bashrc" "genbenchs/" "Polygeist/" "./" "llvm-project-16.0.5.src.tar.xz" "bypass_paywalls_clean-3.1.8.0.xpi" "mlir-rt/" "llvm-project-16.0.5.src/" "st/" "stream-labs-desktop/" "mlir-sandbox/" "tensorflow-2.12.0/" "alacritty/" "bypass-paywalls-firefox-clean-v3.1.8.0/")
 
  ("/home/hpompougnac/src/mlir-sandbox/" (25755 8091 735075 948000) "matmul/" "../" ".gitignore" "transform/" "packing/" "./" ".git/" "mlir-prime/" "README.md")
 

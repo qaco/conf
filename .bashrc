@@ -140,6 +140,7 @@ alias naivecalendar="naivecalendar.sh -t onedark"
 alias mvlc='nvlc -Z --no-metadata-network-access'
 alias cvlc='cvlc -Z --no-metadata-network-access'
 
+alias pdflatex='pdflatex -halt-on-error'
 # Reminder:
 
 # Rip

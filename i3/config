@@ -13,6 +13,14 @@ set $mod Mod4
 
 include /home/hpompougnac/conf/i3/config-ext
 
+exec --no-startup-id feh --bg-fill ~/Images/galaxy.png
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/Images/galaxy.png
+bindsym $mod+x exec --no-startup-id i3lock -i ~/Images/galaxy.png
+# exec --no-startup-id feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee -a /tmp/bg.txt)
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i $(tac /tmp/bg.txt | head -n 1)
+# bindsym $mod+x exec --no-startup-id i3lock -i $(tac /tmp/bg.txt | head -n 1)
+# bindsym $mod+Shift+c exec "feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee -a /tmp/bg.txt)"
+
 font pango:monospace
 gaps inner 15
 
@@ -237,7 +245,6 @@ exec_always --no-startup-id guake
 bindsym $mod+Shift+Return exec emacsclient -c
 # Cal
 # bindsym $mod+c exec naivecalendar.sh -t onedark
-bindsym $mod+c exec zenity --calendar
 # App launcher
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
 # Music
@@ -268,3 +275,4 @@ exec --no-startup-id init_keys.sh
 
 # bindsym $mod+x exec --no-startup-id i3lock -i $(cat /tmp/bg.txt)
 bindsym $mod+Shift+x exec --no-startup-id shutdown now
+bindsym $mod+c exec --no-startup-id zenity --calendar --title=Calendrier --text=""
