@@ -11,7 +11,6 @@
 
 set $mod Mod4
 
-include /home/hpompougnac/conf/i3/config-ext
 
 exec --no-startup-id feh --bg-fill ~/Images/galaxy.png
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/Images/galaxy.png
@@ -241,8 +240,7 @@ bindsym $mod+Shift+w exec thunderbird
 # Terminal/emacs
 # bindsym $mod+Return exec tilix
 bindsym $mod+Return exec mate-terminal
-exec_always --no-startup-id guake
-bindsym $mod+Shift+Return exec emacsclient -c
+bindsym $mod+Shift+Return exec guake
 # Cal
 # bindsym $mod+c exec naivecalendar.sh -t onedark
 # App launcher
@@ -276,3 +274,4 @@ exec --no-startup-id init_keys.sh
 # bindsym $mod+x exec --no-startup-id i3lock -i $(cat /tmp/bg.txt)
 bindsym $mod+Shift+x exec --no-startup-id shutdown now
 bindsym $mod+c exec --no-startup-id zenity --calendar --title=Calendrier --text=""
+include /home/hpompougnac/conf/i3/config-ext

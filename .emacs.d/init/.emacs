@@ -148,6 +148,7 @@
 
 (require 'modern-cpp-font-lock)
 (modern-c++-font-lock-global-mode t)
+(require 'mlir-mode)
 
 ;; Shortcuts
 
@@ -187,6 +188,11 @@
  (global-set-key (kbd "<f4>") 'revert-buffer)
 
 ;; compile
+(global-set-key (kbd "C-x t") (lambda ()
+                                (interactive)
+                                (term shell-file-name)))
+(global-set-key (kbd "C-x D") 'compile)
+(global-set-key (kbd "C-x d") 'recompile)
 (global-set-key (kbd "<f1>") 'compile)
 (global-set-key (kbd "C-<f1>") 'new-compile-cmd)
 (global-set-key (kbd "<f2>") 'recompile)
