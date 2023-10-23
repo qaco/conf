@@ -24,7 +24,7 @@ mkdir -p ~/.config/fontconfig
 mkdir -p ~/.local/share/rofi/themes
 mkdir -p ~/.config/picom
 
-ln i3/config-home i3/config-ext
+echo "include /home/hpompougnac/conf/i3/config" > ~/.config/i3/config
 ln i3/i3bar.conky.conf ~/.config/i3/i3bar.conky.conf
 ln i3/config ~/.config/i3/config
 ln i3/conky-i3bar ~/.config/i3/conky-i3bar
