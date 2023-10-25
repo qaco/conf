@@ -188,9 +188,7 @@
  (global-set-key (kbd "<f4>") 'revert-buffer)
 
 ;; compile
-(global-set-key (kbd "C-x t") (lambda ()
-                                (interactive)
-                                (term shell-file-name)))
+(global-set-key (kbd "C-x t") 'shell)
 (global-set-key (kbd "C-x D") 'compile)
 (global-set-key (kbd "C-x d") 'recompile)
 (global-set-key (kbd "<f1>") 'compile)

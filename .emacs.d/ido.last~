@@ -81,6 +81,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "config-ext"
  "config-home"
  "config-inria"
  "config"
@@ -90,12 +91,11 @@
  "main.tex"
  "onedark.rasi"
  "onedark.rasi.bkp"
- "playing.sh"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/hpompougnac/conf/i3/" (25909 17163 35864 850000) "config-home" "conky-i3bar" "config-inria" "config" "../" ".gitignore" "i3bar.conky.conf~" "i3bar.conky.conf" "./" "config-ext")
+ ("/home/hpompougnac/conf/i3/" (25909 17273 452145 869000) "config-home" "conky-i3bar" "config-inria" "config" "../" ".gitignore" "i3bar.conky.conf~" "i3bar.conky.conf" "./" "config-ext")
 
  ("/home/hpompougnac/conf/" (25892 61340 696369 160000) ".profile~" "tilix/" "../" ".gitignore" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/")
 
