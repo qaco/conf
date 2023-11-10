@@ -120,13 +120,6 @@ client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
-# Load a random wallpaper
-# exec --no-startup-id feh --bg-fill /home/hpompougnac/Images/Wallpapers/Favoris/star_wars/sw_tbtt_mountain.png
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i $(cat /tmp/bg.txt)
-
 # Compositor
 exec_always --no-startup-id picom
 
