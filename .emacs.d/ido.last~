@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/" . "tmp/")
  ("/home/hpompougnac/src/projects/mlir-rt/papers/" . "abstract_clocks/")
  ("/home/hpompougnac/src/projects/mlir-rt/" . "papers/")
  ("/home/hpompougnac/src/projects/" . "mlir-rt/")
@@ -41,10 +42,14 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/hpompougnac/src/articles/genbenchs-article/paper/"
+ "/tmp/"
+ "/home/hpompougnac/src/projects/mm-sparse-variants/"
+ "/home/hpompougnac/src/projects/mlir-rt/papers/abstract_clocks/"
+ "/home/hpompougnac/src/projects/mlir-rt/papers/ssa-sync/"
  "/home/hpompougnac/conf/i3/"
  "/home/hpompougnac/conf/"
  "/home/hpompougnac/"
- "/home/hpompougnac/src/projects/mlir-rt/papers/abstract_clocks/"
  "/home/hpompougnac/conf/rofi/themes/"
  "/home/hpompougnac/conf/scripts/"
  "/home/hpompougnac/.config/picom/"
@@ -81,35 +86,45 @@
 
 ;; ----- ido-work-file-list -----
 (
- "config-ext"
- "config-home"
- "config-inria"
- "config"
- ".bashrc"
- ".basrhc"
- "Makefile"
- "main.tex"
- "onedark.rasi"
- "onedark.rasi.bkp"
+ "overview.tex"
+ "15_harness.tex"
+ "17_static_deps.tex"
+ "leon.txt"
+ "truc0.md"
+ "truc.md"
+ "main.c"
+ "simd.h"
+ "mm-simd.h"
+ "mm-dtype.h"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/hpompougnac/src/articles/genbenchs-article/paper/" (25933 23150 726632 432000) "17_static_deps.tex" "figs/" "25_results_analysis.tex" "main.pdf" "CesASMe-CGO24.pdf" "../" "20_evaluation.tex" "main.fls" "17_static_deps.tex~" "ACM-Reference-Format.bst" "30_future_works.tex" "main.bib" "CesASMe-CGO24.pdf_original" "acmart.cls" "whatnext.tex" "staticdeps/" "./" "main.log" "acmart/" "main.fdb_latexmk" "02_intro.tex" "00_abstract.tex" "overview.tex" "10_bench_gen.tex" "05_related_works.tex" "defs.tex" "main.bbl" "main.aux" "Makefile" "main.tex" "README.md" "contrib.tex" "main.blg" "todo.sty" "main.out" "15_harness.tex")
+
+ ("/tmp/" (25927 28527 812603 910000) "Temp-e2082d2e-d8b7-4502-9dbd-3a777435d373/" "dim. 05 nov. 2023 11:32:40 CET.png" ".X11-unix/" "tmp-1f5.xpi" ".font-unix/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-colord.service-YMqXJP/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-systemd-logind.service-2il04d/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-ModemManager.service-OYfqqj/" "tmp-arc.xpi" "ssh-XXXXXX07KcXB/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-iwd.service-YeeRL2/" ".XIM-unix/" ".X0-lock" "396698948_629311886069975_8901226720331751829_n.jpg" "serverauth.Q6sRzvwOyM" ".ICE-unix/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-systemd-timesyncd.service-umGieJ/" "carte_1967_2016_less.jpg" "../" "./")
+
+ ("/home/hpompougnac/" (25927 20766 414411 847000) ".scripts/" ".nmcli-history" ".basrhc" ".cache/" ".local/" ".lesshst" ".profile~" ".naivecalendar_events/" "Images/" ".bash_history-88148.tmp" "Téléchargements/" "Modèles/" "Documents/" ".xbindkeysrc" ".gnome/" ".icons/" ".terminfo/" "src/" ".npm/" ".neomutt/" "../" ".nv/" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".themes/" ".bashrc" ".pki/" ".bash_logout" "GOG Games/" ".xinitrc~" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "Musique/" ".playlists/" ".mplayer/" ".emacs" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" "Vidéos/" ".gitconfig" ".newsboat/" ".xbindkeysrc~" ".profile" ".sane/" "go/" ".emacs.d/" ".Xauthority" "Public/" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".yarn/" ".nvidia-settings-rc" ".sudo_as_admin_successful" ".fonts/" ".texlive2022/")
+
+ ("/home/hpompougnac/Documents/" (25912 63189 883549 479000) "Parti-Pris NR 04 06 2023.odt" "Parti-Pris NR 04 06 2023 final.doc" "Lénine 2.docx" "La situation après une semaine d'émeutes.docx" "groupe actu politique.odt" "Nr contribution.odt" "Article Nahel.odt.saved" "Article Nahel2.odt" "Lénine - Combat pour le pouvoir et combat pour une aumône.odt" "Parti-pris - discussion des 2 et 3 septembre 2023.pdf" "Nr contribution2.odt" "Les lectures et les références politiques de Lénine.docx" "Bilan 2023.pdf" "Lénine.docx" "Parti-pris - discussion des 2 et 3 septembre 2023- RELU.odt" "Accueillir_sans_condition-NRs_v_LS-2023-10-08.doc" "Politique/" "Article Nahel.odt" "Parti-Pris NR 04 06 2023.pdf" "../" "Parti-pris - discussion des 2 et 3 septembre 2023.docx" "2023 ce qui est en jeu.pdf" "Article Nahel.pdf" "Parti-pris - discussion des 2 et 3 septembre 2023- FINAL.odt" "Bilan 2023.docx" "Parti-Pris NR 04 06 2023.doc" ".~lock.Article Nahel.odt#" "Nr contribution.pdf" "zurich/" ".~lock.Lénine 2.docx#" ".~lock.Lénine.docx#" "IRM radio.pdf" ".~lock.Parti-pris - discussion des 2 et 3 septembre 2023- FINAL.odt#" "seminaire crs/" "Parti-pris - discussion des 2 et 3 septembre 2023- FINAL.pdf" "billets/" "intro orga NR.odt" "Parti-Pris NR 04 06 2023.abw.bak~" "Relevé Décisions Débat organisation.odt" ".~lock.Nr contribution2.odt#" "./" ".~lock.ODJ Séminaire NosRévolutions.odt#" "Relevé Décisions Débat organisation.pdf" "ODJ Séminaire NosRévolutions.odt" "Parti-Pris NR 04 06 2023.odt.bak~" "ODJ Séminaire NosRévolutions.pdf" "2023 ce qui est en jeu.docx" "convocation non nominative.pdf" "id.pdf" "IRM radio_compressed.pdf" ".~lock.Nr contribution.odt#" "Article_stratégie_p1_Hugo.docx" "Document_autosave_23_10_2023_09_39.sla" "Article_Hugo_-_Stratégie_Volet_1 RELU AG.docx" "Parti-Pris NR 04 06 2023.abw")
+
+ ("/home/hpompougnac/src/projects/" (25911 63120 464218 558000) "../" "genbenchs/" "./" "mlir-rt/" "mlir-sandbox/" "mm-sparse-variants/")
+
+ ("/home/hpompougnac/src/projects/mm-sparse-variants/" (25913 8557 695435 871000) "mm-packx16-tile.exe" "clock.c" "mm-mkl.c" "mm-mkl-test.o" "mm-tensor-utils.c" "mm-packx16-tile.d" "mm-ikj.d" "mm-values.c.in" "TODO.md" "mm-packx8-tile.o" "utils-impl.h" "perf_event.d" ".mypy_cache/" "mm-tensor.o" "mm-tensor-npy.d" "mm-packx8.d" "perf_event.o" "mm-values.h.in" "mm-pattern.gen.d" "mm-tensor-impl.h" "mm-mkl.d" "mm-spmkl.o" "mm-pattern.gen.patterns.d" "main.c" "mm-mkl.h" "clock.o" "../" "mm-mkl.o" "requirements.txt" "mm-tensor.d" "mm-mkl-impl.h" "notes.md~" "mm-pattern.gen.o" "mm-tensor-npy.c" "mm-packx8-tile.exe" "mm-tile-config.mk" "mm-ikj.c" "mm-packx16.d" "mm-spmkl.d" "mm-dmkl.o" "mm-pattern.gen.c" "mm-packx4.c" "mm-input-config.mk.tmp" "mm-spmkl.c" "mm-utils.d" "mm-packx8-tile.d" "validate.py" "mm-utils.o" "evaluate.d" "mm-ABC.gen.npz" "evaluate.h" "mm-tensor-npy-test.exe" "mm-default.c" "mm-packx16-tile.c" "utils.o" "mm-simd.h" "utils.h" "generate.py" "config.mk.tmp" "utils.c" "mm-tensor-npy.o" "mm-input-config.mk" "mm-packx16-tile.o" "mm-dtype.h" "mm-pattern-switch-inlined.c" "mm-values.h" "clock.h" "configure" "mm-tensor-utils.h" "simd.h" "mm-tensor-utils.o" "mm-dmkl.c" "clock.d" "./" "evaluate.c" "mm-tensor-npy.h" ".git/" "mm-packx4.o" "mm-ikj.exe" "mm-pattern.gen.patterns.o" "mm-pattern-switch.c" "perf_event.c" "mm-tensor-utils.d" "mm-pattern-call.c" "mm-dmkl.exe" "mm-packx4.exe" "mm-mkl-test.exe" "Makefile" "mm-tensor-npy-test.o" "mm-packx8.c" "mm-pattern.gen.patterns.S" "mm-tensor.c" "mm-packx8-tile.c" "mm-default.d" "mm-config.mk.tmp" "perf_event.h" "README.md" "mm-utils.c" "main.d" "evaluate.o" "venv/" "mm-default.o" "scripts/" "mm-tile-config.mk.tmp" "mm-dmkl.d" "mm-packx8.o" "mm-utils.h" "mm-ABC.gen.h" "mm-packx8.exe" "mm-ikj.o" "mm-spmkl.exe" "mm-default.exe" "config.mk" "utils.d" "mypy.ini" "mm-tensor.h" "mypy-generate.py.cache" "mm-pattern.gen.exe" "mm-packx16.o" "notes.md" "mm-packx16.exe" "mm-packx16.c" "mm-packx4.d" "mm-config.mk" "main.o")
+
+ ("/home/hpompougnac/src/projects/mlir-rt/papers/abstract_clocks/" (25909 42441 60493 607000) "dataflow2.tex" "Makefile~" "main.pdf" "../" "dataflow.tex" "algorithm.tex" ".gitignore" "main.bib~" "main.bib" "dataflow.tex~" "draft.tex" "./" "main.log" "main.bbl" "main.aux" "Makefile" "main.tex" "main.blg")
+
+ ("/home/hpompougnac/src/projects/mlir-rt/papers/ssa-sync/" (25731 44781 352321 90000) "lustre.tex" "TODO.txt" "conclusion.tex" ".DS_Store" "response.txt" "figures/" "../" "ssa2sync.tex" "introduction.tex" "final-version-cover-letter.txt" "paper.tex" "ssa-sync-rules.tex" "ACM-Reference-Format.bst" "final-version-files/" "ssa-sema-rules.tex" "acmart.cls" "appendix.tex" "example.tex" "ssa-sema-undef.tex" "./" "ssa-sema.tex" "ssa-syntax.tex" "related.tex" "usecase.tex" "abstract-tac.tex" "Makefile" "cover-taco.tex" "ssa.tex" "leftover.tex" "examples/" "final-version.pdf" "reviews.txt" "paper.bib")
+
  ("/home/hpompougnac/conf/i3/" (25909 17273 452145 869000) "config-home" "conky-i3bar" "config-inria" "config" "../" ".gitignore" "i3bar.conky.conf~" "i3bar.conky.conf" "./" "config-ext")
 
  ("/home/hpompougnac/conf/" (25892 61340 696369 160000) ".profile~" "tilix/" "../" ".gitignore" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/")
 
- ("/home/hpompougnac/" (25895 62973 317244 124000) ".scripts/" ".nmcli-history" ".basrhc" ".cache/" ".local/" ".lesshst" ".profile~" ".naivecalendar_events/" "Images/" ".bash_history-88148.tmp" "Téléchargements/" "Modèles/" "Documents/" ".xbindkeysrc" ".gnome/" ".icons/" ".terminfo/" "src/" ".npm/" ".neomutt/" "../" ".nv/" ".Xdefaults" ".abcde.conf" ".parallel/" ".ssh/" ".xinitrc" ".nchat/" ".themes/" ".bashrc" ".pki/" ".bash_logout" "GOG Games/" ".xinitrc~" ".steam/" ".config/" ".xsession-errors" ".gcp/" "bin/" "Musique/" ".playlists/" ".mplayer/" ".emacs" "Mail/" "Desktop/" ".steampid" ".bash_history" ".moc/" ".python_history" ".bashrc.bkp" ".telegram-cli/" "conf/" ".urxvt/" "./" "Vidéos/" ".gitconfig" ".newsboat/" ".xbindkeysrc~" ".profile" ".sane/" "go/" ".emacs.d/" ".Xauthority" "Public/" ".steampath" ".mutt/" ".wget-hsts" ".ocamlinit" ".fehbg" ".thunderbird/" ".opam/" ".mozilla/" ".yarn/" ".nvidia-settings-rc" ".sudo_as_admin_successful" ".fonts/" ".texlive2022/")
-
  ("/home/hpompougnac/src/articles/sheets/" (25895 64174 337392 562000) "backprop.tex~" "../" "./" ".git/" "backprop.tex")
-
- ("/home/hpompougnac/src/projects/mlir-rt/papers/abstract_clocks/" (25895 7031 391149 107000) "dataflow2.tex" "Makefile~" "main.pdf" "../" "dataflow.tex" "algorithm.tex" ".gitignore" "dataflow.tex~" "draft.tex" "./" "main.log" "main.aux" "Makefile" "main.tex")
 
  ("/home/hpompougnac/src/projects/mlir-rt/papers/" (25731 44781 340320 477000) "abstract_clocks/" "ssa-sync/" "mi-parcours/" "../" "ReactiveML/" "./" "pssa_spec.md" "poster/")
 
  ("/home/hpompougnac/src/projects/mlir-rt/" (25732 30025 201003 201000) "presentations/" "mlir-emacs-mode.el" "../" ".gitignore" "keras-lus/" "thesis/" "papers/" "projects/" "markdown-mode.el" "./" "usecases/" ".git/" ".gitmodules" "iree/" "sandbox/" "llvm-build/" "README.md" "scripts/" "INSTALL.md" "INVOCATION.md" "mlir-lus/")
-
- ("/home/hpompougnac/src/projects/" (25895 63869 649649 810000) "../" "genbenchs/" "./" "mlir-rt/" "mlir-sandbox/")
 
  ("/home/hpompougnac/src/" (25895 63869 649649 810000) "utilities/" "../" ".bashrc" "projects/" "./" "articles/" "sandbox/" "upstream/")
 
