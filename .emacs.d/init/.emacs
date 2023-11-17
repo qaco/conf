@@ -169,6 +169,8 @@
 (global-set-key (kbd "C-:") 'dabbrev-expand)
 
 ;; manage windows
+(global-set-key (kbd "C-x <") 'enlarge-window)
+(global-set-key (kbd "C-x >") 'shrink-window)
 (global-set-key (kbd "C-x n") 'switch-to-next-buffer)
 (global-set-key (kbd "C-x p") 'switch-to-prev-buffer)
 (windmove-default-keybindings) ; S-arrow pour naviger
@@ -188,7 +190,7 @@
  (global-set-key (kbd "<f4>") 'revert-buffer)
 
 ;; compile
-(global-set-key (kbd "C-x t") 'shell)
+(global-set-key (kbd "C-x t") 'term)
 (global-set-key (kbd "C-x D") 'compile)
 (global-set-key (kbd "C-x d") 'recompile)
 (global-set-key (kbd "<f1>") 'compile)
