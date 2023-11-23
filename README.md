@@ -1,8 +1,14 @@
 # Debian installation
 
-update-alternatives: utilisation de « /usr/bin/i3 » pour fournir « /usr/bin/x-window-manager
+## Internet
+
+### Changer DNS
+
+Suivre ce lien : https://www.ionos.com/digitalguide/server/configuration/how-to-set-dns-on-debian/
 
 ## Desktop environment
+
+update-alternatives: utilisation de « /usr/bin/i3 » pour fournir « /usr/bin/x-window-manager
 
 ### Mate + i3
 
