@@ -123,6 +123,8 @@ client.background       $base07
 # Compositor
 exec_always --no-startup-id picom
 
+default_border pixel 2
+
 include /home/hpompougnac/conf/i3/config-ext
 include /home/hpompougnac/conf/i3/shortcuts-apps.conf
 include /home/hpompougnac/conf/i3/shortcuts-windows.conf

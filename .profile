@@ -33,3 +33,4 @@ test -r /home/hpompougnac/.opam/opam-init/init.sh && . /home/hpompougnac/.opam/o
 
 # kill it with emacsclient -e "(kill-emacs)"
 # emacs --daemon
+. "$HOME/.cargo/env"

@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/hpompougnac/src/reviews/slade_artifact_cgo24_second/" . "slade_module/")
  ("/" . "tmp/")
  ("/home/hpompougnac/src/projects/mlir-rt/papers/" . "abstract_clocks/")
  ("/home/hpompougnac/src/projects/mlir-rt/" . "papers/")
@@ -42,12 +43,15 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/hpompougnac/src/articles/sensitivity-gus-paper/scripts/"
+ "/home/hpompougnac/src/articles/sensitivity-gus-paper/"
+ "/home/hpompougnac/src/reviews/slade_artifact_cgo24_second/slade_module/"
+ "/home/hpompougnac/conf/i3/"
  "/home/hpompougnac/src/articles/genbenchs-article/paper/"
  "/tmp/"
  "/home/hpompougnac/src/projects/mm-sparse-variants/"
  "/home/hpompougnac/src/projects/mlir-rt/papers/abstract_clocks/"
  "/home/hpompougnac/src/projects/mlir-rt/papers/ssa-sync/"
- "/home/hpompougnac/conf/i3/"
  "/home/hpompougnac/conf/"
  "/home/hpompougnac/"
  "/home/hpompougnac/conf/rofi/themes/"
@@ -86,21 +90,33 @@
 
 ;; ----- ido-work-file-list -----
 (
- "overview.tex"
- "15_harness.tex"
+ "rob.py"
+ "defs.tex"
+ "Makefile"
+ "new_evaluator.py"
+ "shortcuts-apps.conf"
  "17_static_deps.tex"
- "leon.txt"
- "truc0.md"
- "truc.md"
- "main.c"
- "simd.h"
- "mm-simd.h"
- "mm-dtype.h"
+ "15_harness.tex"
+ "shortcuts-windows.conf"
+ "shortcut-apps.conf"
+ "shortcut-windows.conf"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/hpompougnac/src/articles/genbenchs-article/paper/" (25933 23150 726632 432000) "17_static_deps.tex" "figs/" "25_results_analysis.tex" "main.pdf" "CesASMe-CGO24.pdf" "../" "20_evaluation.tex" "main.fls" "17_static_deps.tex~" "ACM-Reference-Format.bst" "30_future_works.tex" "main.bib" "CesASMe-CGO24.pdf_original" "acmart.cls" "whatnext.tex" "staticdeps/" "./" "main.log" "acmart/" "main.fdb_latexmk" "02_intro.tex" "00_abstract.tex" "overview.tex" "10_bench_gen.tex" "05_related_works.tex" "defs.tex" "main.bbl" "main.aux" "Makefile" "main.tex" "README.md" "contrib.tex" "main.blg" "todo.sty" "main.out" "15_harness.tex")
+ ("/home/hpompougnac/src/articles/sensitivity-gus-paper/scripts/" (25979 20173 450515 11000) "../" "./" "rob.py")
+
+ ("/home/hpompougnac/src/articles/sensitivity-gus-paper/src/" (25972 19683 212858 827000) "02-bottleneckness.tex" "../" "00-abstract.tex" "archi.svg" "05-relatedworks.tex" "04-evaluation.tex" "./" "archi.py~" "03-gus.tex" "06-conclusion.tex" "archi.py" "01-introduction.tex" "archi.png" "README")
+
+ ("/home/hpompougnac/src/articles/sensitivity-gus-paper/" (25972 12550 173177 835000) "main.pdf" "figures/" "src/" "../" ".gitignore" "main.fls" "main.bib" "usenix-2020-09.sty" "./" "main.log" "main.fdb_latexmk" ".git/" "defs.tex" "main.bbl" "main.aux" "Makefile" "main.tex" "README.md" "main.blg" "main.out")
+
+ ("/home/hpompougnac/src/reviews/slade_artifact_cgo24_second/slade_module/" (25953 12215 0 0) "exebench/" "builtin_fnames.txt" "data_proc.py" "compiler_io_eval/" "new_evaluator.py" "../" "metrics.py" "dep_retrieval.py" "__init__.py" "baselines.py" "c_scraper/" "asm.py" "./" "__pycache__/" "dep_retriever.py" "utils.py")
+
+ ("/home/hpompougnac/src/reviews/slade_artifact_cgo24_second/" (25971 29374 842008 924000) "test.c" "new_evaluate_art_btc.py" "../" "test_psychec.py" "requirements.txt" "btc/" "plot_evals.py" "output/" "eval_data/" "gcc_version.txt" "_tmp/" "psychec/" "new_evaluate_art_ghidra.py" "./" "slade_module/" "test.cnip.c" "test.cstr" "README.md~" "LICENSE" "new_evaluate_art_oai.py" "README.md" "cmake_version.txt" "venv/" "new_evaluate_art.py" "requirements_freeze.txt")
+
+ ("/home/hpompougnac/src/articles/genbenchs-article/paper/" (25939 8317 202080 843000) "17_static_deps.tex" "figs/" "25_results_analysis.tex" "CesASMe-CC24.pdf" "CesASMe-CC24-supplementary.pdf" "main.pdf" "../" "CesASMe-CC24-supplementary.pdf_original" "20_evaluation.tex" "main.fls" "CesASMe-CC24.pdf_original" "ACM-Reference-Format.bst" "30_future_works.tex" "main.bib" "CesASMe-CGO24.pdf_original" "acmart.cls" "whatnext.tex" "reunion-2023-11-08/" "staticdeps/" "./" "main.log" "acmart/" "main.fdb_latexmk" "02_intro.tex" "00_abstract.tex" "overview.tex" "10_bench_gen.tex" "05_related_works.tex" "defs.tex" "main.bbl" "18_rob_proof.tex" "main.aux" "metadata.tex" "Makefile" "main.tex" "README.md" "contrib.tex" "main.blg" "todo.sty" "main.out" "supplementary_material/" "15_harness.tex")
+
+ ("/home/hpompougnac/conf/i3/" (25937 54148 775032 329000) "shortcuts~" "config-home" "conky-i3bar" "config-inria" "config" "../" ".gitignore" "i3bar.conky.conf~" "shortcuts-apps.conf" "shortcuts-windows~" "shortcuts-windows.conf" "i3bar.conky.conf" "./" "config-ext")
 
  ("/tmp/" (25927 28527 812603 910000) "Temp-e2082d2e-d8b7-4502-9dbd-3a777435d373/" "dim. 05 nov. 2023 11:32:40 CET.png" ".X11-unix/" "tmp-1f5.xpi" ".font-unix/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-colord.service-YMqXJP/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-systemd-logind.service-2il04d/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-ModemManager.service-OYfqqj/" "tmp-arc.xpi" "ssh-XXXXXX07KcXB/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-iwd.service-YeeRL2/" ".XIM-unix/" ".X0-lock" "396698948_629311886069975_8901226720331751829_n.jpg" "serverauth.Q6sRzvwOyM" ".ICE-unix/" "systemd-private-b7dbe073102b41929bc4db8f6e389fa5-systemd-timesyncd.service-umGieJ/" "carte_1967_2016_less.jpg" "../" "./")
 
@@ -115,8 +131,6 @@
  ("/home/hpompougnac/src/projects/mlir-rt/papers/abstract_clocks/" (25909 42441 60493 607000) "dataflow2.tex" "Makefile~" "main.pdf" "../" "dataflow.tex" "algorithm.tex" ".gitignore" "main.bib~" "main.bib" "dataflow.tex~" "draft.tex" "./" "main.log" "main.bbl" "main.aux" "Makefile" "main.tex" "main.blg")
 
  ("/home/hpompougnac/src/projects/mlir-rt/papers/ssa-sync/" (25731 44781 352321 90000) "lustre.tex" "TODO.txt" "conclusion.tex" ".DS_Store" "response.txt" "figures/" "../" "ssa2sync.tex" "introduction.tex" "final-version-cover-letter.txt" "paper.tex" "ssa-sync-rules.tex" "ACM-Reference-Format.bst" "final-version-files/" "ssa-sema-rules.tex" "acmart.cls" "appendix.tex" "example.tex" "ssa-sema-undef.tex" "./" "ssa-sema.tex" "ssa-syntax.tex" "related.tex" "usecase.tex" "abstract-tac.tex" "Makefile" "cover-taco.tex" "ssa.tex" "leftover.tex" "examples/" "final-version.pdf" "reviews.txt" "paper.bib")
-
- ("/home/hpompougnac/conf/i3/" (25909 17273 452145 869000) "config-home" "conky-i3bar" "config-inria" "config" "../" ".gitignore" "i3bar.conky.conf~" "i3bar.conky.conf" "./" "config-ext")
 
  ("/home/hpompougnac/conf/" (25892 61340 696369 160000) ".profile~" "tilix/" "../" ".gitignore" ".bashrc" "fontconfig/" "install.sh" "rofi/" "newsboat/" "./" ".git/" ".profile" ".emacs.d/" "README.md" ".bashrc~" "scripts/" "i3/" "picom/")
 
