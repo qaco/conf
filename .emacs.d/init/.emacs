@@ -131,6 +131,7 @@
 (setq-default indent-tabs-mode nil)
 (delete-selection-mode t)                     ; overwrite region
 (setq case-fold-search t)                     ; search ignore la casse
+(setq backup-directory-alist `(("." . "~/.saves")))
 
 ;; No questions
 (fset 'yes-or-no-p 'y-or-n-p)                 ; y-or-n remplace yes-or-no

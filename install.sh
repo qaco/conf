@@ -7,6 +7,7 @@ ln -s .bashrc ~/.bashrc
 ln -s .profile ~/.profile
 ln -s .emacs.d/init/.emacs ~/.emacs
 ln -s .emacs.d/ ~/.emacs.d
+mkdir ~/.saves
 
 rm -f ~/.config/rofi
 rm -f ~/.config/conky

@@ -131,7 +131,6 @@ alias neomutt="TERM=xterm-256color neomutt"
 
 export PATH=$PATH:~/conf/scripts/
 
-alias naivecalendar="naivecalendar.sh -t onedark"
 alias mvlc='nvlc -Z --no-metadata-network-access'
 alias cvlc='cvlc -Z --no-metadata-network-access'
 alias nterm='mate-terminal --window'
@@ -141,6 +140,5 @@ alias pdflatex='pdflatex -halt-on-error'
 
 # Rip
 # abcde -o flac
-
 source ~/.paths
 . "$HOME/.cargo/env"
