@@ -129,12 +129,7 @@ fi
 alias mc="TERM=xterm-256color mc"
 alias neomutt="TERM=xterm-256color neomutt"
 
-export PATH=$PATH:/sbin/
-export PATH=$PATH:~/src/naivecalendar/src/
 export PATH=$PATH:~/conf/scripts/
-export PATH=$PATH:~/src/tensorflow-2.12.0/bazel-out/k8-opt/bin/tensorflow/compiler/mlir/
-export PATH=$PATH:~/bin/
-export PATH=$PATH:~/bin/llvm/bin/
 
 alias naivecalendar="naivecalendar.sh -t onedark"
 alias mvlc='nvlc -Z --no-metadata-network-access'
@@ -146,3 +141,6 @@ alias pdflatex='pdflatex -halt-on-error'
 
 # Rip
 # abcde -o flac
+
+source ~/.paths
+. "$HOME/.cargo/env"
