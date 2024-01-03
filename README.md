@@ -4,11 +4,11 @@
 
 ### Changer DNS
 
-Suivre ce lien : https://www.ionos.com/digitalguide/server/configuration/how-to-set-dns-on-debian/
+Follow this link : https://www.ionos.com/digitalguide/server/configuration/how-to-set-dns-on-debian/
 
 ## Desktop environment
 
-update-alternatives: utilisation de « /usr/bin/i3 » pour fournir « /usr/bin/x-window-manager
+update-alternatives: usage of « /usr/bin/i3 » to provide « /usr/bin/x-window-manager
 
 ### Mate + i3
 
@@ -43,7 +43,7 @@ Tilix is a good compromise:
 * It really supports Unicode.
 * But it depends on GTk3 and does not provide a text configuration file.
 
-I prefer mate-terminal (but it is part of the Mate desktop environment).
+I prefer mate-terminal (even if it is part of the Mate desktop environment).
 
 In comparison:
 * kitty does not work well with emacs in console.
@@ -94,7 +94,7 @@ URxvt.boldfont: xft:DejaVu Sans Mono:bold:size=11
 ### Printers
 
 ```
-sudo usermod -a -G lpadmin hpompougnac
+sudo usermod -a -G lpadmin myusername
 ```
 
 ### Network
