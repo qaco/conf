@@ -151,6 +151,11 @@
 (modern-c++-font-lock-global-mode t)
 (require 'mlir-mode)
 
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
+
 ;; Shortcuts
 
 (require 'extra-commands)
@@ -201,3 +206,16 @@
 
 ;; command
 (global-set-key (kbd "M-x") 'smex)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(elpy xclip use-package spacemacs-theme spacegray-theme smex seti-theme pdf-tools nord-theme modern-cpp-font-lock markdown-mode magit ido-vertical-mode gruvbox-theme buffer-move base16-theme atom-one-dark-theme afternoon-theme)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

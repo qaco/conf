@@ -127,3 +127,5 @@ include /home/hpompougnac/conf/i3/shortcuts-windows.conf
 default_border pixel 2
 exec --no-startup-id feh --bg-fill ~/Images/galaxy.png
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/Images/galaxy.png
+
+for_window [class="Eom" instance="eom"] floating enable
