@@ -34,42 +34,41 @@ conky.text = [[
 [
     { "full_text": "${exec playing.sh vlc 🎸 30 30}",
       "color": "\#61afef" },
-    # { "full_text": "${exec playing.sh firefox.* 🦊 30 30}",
-    #   "color": "\#61afef" },
     { "full_text": 
-		   ${if_match ${cpu cpu0}<10}"🚀 CPU  ${cpu cpu0}%" \
+        	   ${if_match ${cpu cpu0}<10}"🚀 CPU  ${cpu cpu0}%" \
                    ${else}${if_match ${cpu cpu0}<90}"🚀 CPU ${cpu cpu0}%" \
                    ${else}"🔥 CPU ${cpu cpu0}%" \
-		   ${endif} \
-		   ${endif},
+        	   ${endif} \
+        	   ${endif},
       "color": ${if_match ${cpu cpu0}<90}"\#61afef" \
                ${else}"\#f2241f" \
-	       ${endif} },
+               ${endif} },
     { "full_text": ${if_match ${memperc cpu0}<90}"🐏 RAM ${memperc}%" \
       		   ${else}"🔥 RAM ${memperc}%" \
-		   ${endif},
+        	   ${endif},
       "color": ${if_match ${memperc}<90}"\#61afef" \
                ${else}"\#f2241f" \
-	       ${endif} },
+               ${endif} },
     { "full_text": ${if_match ${wireless_link_qual wlan0}>0}
       		     "🌍 Wi-Fi ${wireless_link_qual wlan0}%" \
-		   ${else}"" \
-		   ${endif},
+        	   ${else}"" \
+        	   ${endif},
        "color": ${if_match ${wireless_link_qual wlan0}>10}"\#61afef" \
-		   	    ${else}"\#f2241f" \
-			    ${endif}},
-    { "full_text": ${if_pa_sink_muted}"🔕 ${pa_sink_volume}" \
-                   ${else} \
-		   ${if_match ${pa_sink_volume} < 1}"🔕 ${pa_sink_volume}" \
-		   ${else}"🔔 ${pa_sink_volume}" \
-		   ${endif} \
-	           ${endif},
-      "color":${if_pa_sink_muted}"\#f2241f" \
-              ${else} \
-	      ${if_match ${pa_sink_volume} < 1}"\#b2b2b2" \
-              ${else}"\#61afef"\
-	      ${endif} \
-	      ${endif} },
+        	   	    ${else}"\#f2241f" \
+        		    ${endif}},
+    # { "full_text": ${if_pa_sink_muted}"🔕 ${pa_sink_volume}" \
+    #                ${else} \
+    #     	   ${if_match ${pa_sink_volume} < 1}"🔕 ${pa_sink_volume}" \
+    #     	   ${else}"🔔 ${pa_sink_volume}" \
+    #     	   ${endif} \
+    #                ${endif},
+    #   "color":${if_pa_sink_muted}"\#f2241f" \
+    #           ${else} \
+    #           ${if_match ${pa_sink_volume} < 1}"\#b2b2b2" \
+    #           ${else}"\#61afef"\
+    #           ${endif} \
+    #           ${endif} },
+    { "full_text": "⚡ POW ${battery_percent}%", "color": "\#61afef"},
     { "full_text": "[${exec xset q | grep -c 'Caps Lock:   on' | sed 's/0/🔤/g' | sed 's/1/🔠/g'}]",
       "color": "\#61afef" },
     { "full_text": "${time %a %d.%m.%Y}", "color": "\#ABB2BF"},

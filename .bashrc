@@ -141,4 +141,3 @@ alias pdflatex='pdflatex -halt-on-error'
 # Rip
 # abcde -o flac
 source ~/.paths
-. "$HOME/.cargo/env"
