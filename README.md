@@ -108,6 +108,8 @@ Wifi:
 * Install ```firmware-realtex``` (drivers)
 * ```nmcli device wifi connect myessid password mypasswd```
 
+* Note that nm-applet (from the package network-manager-gnome) is mutually exclusive with /etc/network/interfaces
+
 ### Nvidia GPU
 
 Add to /etc/default/grub in order to avoid tty resolution issues:
