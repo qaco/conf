@@ -17,17 +17,22 @@
  '("melpa-stable" . "https://stable.melpa.org/packages/")
  t)
 
-;; (unless package-archive-contents
-;;   (package-refresh-contents))
-;; (setq package-list '(spacemacs-theme
-;; 		     buffer-move
-;; 		     ido-vertical-mode
-;;                      smex
-;;                      magit
-;;                      recentf))
-;; (dolist (package package-list)
-;;   (unless (package-installed-p package)
-;;     (package-install package)))
+(unless package-archive-contents
+  (package-refresh-contents))
+(setq package-list '(xclip
+		     buffer-move
+		     ido-vertical-mode
+                     smex
+                     use-package
+                     markdown-mode
+                     modern-cpp-font-lock
+                     elpy
+                     atom-one-dark-theme
+                     magit
+                     recentf))
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 ;;
 ;; Minor modes
@@ -125,9 +130,9 @@
 (setq compile-command "make")
 
 ;; Default behaviours
-(setq scroll-step 1
-      scroll-conservatively 10000
-      auto-window-vscroll nil)
+;; (setq scroll-step 1
+;;       auto-window-vscroll nil
+;;       scroll-conservatively 10000)
 (setq-default indent-tabs-mode nil)
 (delete-selection-mode t)                     ; overwrite region
 (setq case-fold-search t)                     ; search ignore la casse
