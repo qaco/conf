@@ -15,7 +15,7 @@ rm -f ~/.config/i3
 rm -f ~/.config/newsboat
 rm -f ~/.config/fontconfig
 rm -f ~/.local/share/rofi/themes
-rm -f ~/.config/picom
+rm -rf ~/.config/picom
 
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/conky
