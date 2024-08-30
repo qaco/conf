@@ -117,6 +117,7 @@
 ;; Line/column
 (setq-default fill-column 79                  ; largeur de page : 80 char
               word-wrap t)                    ; coupe après le mot
+(global-display-line-numbers-mode 1)
 (global-visual-line-mode t)
 (column-number-mode 1)                            ; afficher numéro de colonne
 (line-number-mode 1)                              ; afficher numéro de ligne
@@ -155,6 +156,7 @@
 (require 'modern-cpp-font-lock)
 (modern-c++-font-lock-global-mode t)
 (require 'mlir-mode)
+(require 'sail-mode)
 
 (use-package elpy
   :ensure t
@@ -217,10 +219,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(elpy xclip use-package spacemacs-theme spacegray-theme smex seti-theme pdf-tools nord-theme modern-cpp-font-lock markdown-mode magit ido-vertical-mode gruvbox-theme buffer-move base16-theme atom-one-dark-theme afternoon-theme)))
+   '(tuareg elpy xclip use-package spacemacs-theme spacegray-theme smex seti-theme pdf-tools nord-theme modern-cpp-font-lock markdown-mode magit ido-vertical-mode gruvbox-theme buffer-move base16-theme atom-one-dark-theme afternoon-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+(require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line
