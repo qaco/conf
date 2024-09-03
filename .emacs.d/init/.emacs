@@ -131,9 +131,9 @@
 (setq compile-command "make")
 
 ;; Default behaviours
-;; (setq scroll-step 1
-;;       auto-window-vscroll nil
-;;       scroll-conservatively 10000)
+(setq scroll-step 1
+      auto-window-vscroll nil
+      scroll-conservatively 10000)
 (setq-default indent-tabs-mode nil)
 (delete-selection-mode t)                     ; overwrite region
 (setq case-fold-search t)                     ; search ignore la casse
