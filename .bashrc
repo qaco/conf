@@ -141,3 +141,4 @@ alias pdflatex='pdflatex -halt-on-error'
 # Rip
 # abcde -o flac
 source ~/.paths
+alias FileCheck=FileCHeck-14
