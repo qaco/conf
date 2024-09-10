@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# sudo apt install network-manager-gnome opam
+# sudo apt install network-manager-gnome opam dconf-cli
 
 rm ~/.bashrc
 rm ~/.profile
