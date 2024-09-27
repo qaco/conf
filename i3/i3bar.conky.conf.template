@@ -68,7 +68,7 @@ conky.text = [[
     #           ${else}"\#61afef"\
     #           ${endif} \
     #           ${endif} },
-    { "full_text": "⚡ POW ${battery_percent}%", "color": "\#61afef"},
+    # { "full_text": "⚡ POW ${battery_percent}%", "color": "\#61afef"},
     { "full_text": "[${exec xset q | grep -c 'Caps Lock:   on' | sed 's/0/🔤/g' | sed 's/1/🔠/g'}]",
       "color": "\#61afef" },
     { "full_text": "${time %a %d.%m.%Y}", "color": "\#ABB2BF"},
