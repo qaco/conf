@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head>
+    <title>Liferea Feed List Export</title>
+  </head>
+  <body>
+    <outline title="Tous" text="Tous" description="Tous" type="folder">
+      <outline title="Marxisme" text="Marxisme" description="Marxisme" type="folder">
+        <outline title="Orient XXI" text="Orient XXI" description="Orient XXI" type="rss" xmlUrl="https://orientxxi.info/?page=backend&amp;lang=fr" htmlUrl="https://orientxxi.info/"/>
+        <outline title="Afrique XXI" text="Afrique XXI" description="Afrique XXI" type="rss" xmlUrl="https://afriquexxi.info/?page=backend&amp;lang=fr" htmlUrl="https://afriquexxi.info/"/>
+        <outline title="Le Monde diplomatique" text="Le Monde diplomatique" description="Le Monde diplomatique" type="rss" xmlUrl="https://www.monde-diplomatique.fr/rss/" htmlUrl="https://www.monde-diplomatique.fr/"/>
+        <outline title="CONTRETEMPS" text="CONTRETEMPS" description="CONTRETEMPS" type="rss" xmlUrl="https://www.contretemps.eu/feed/" htmlUrl="https://www.contretemps.eu/"/>
+        <outline title="Frustration Magazine" text="Frustration Magazine" description="Frustration Magazine" type="rss" xmlUrl="https://www.frustrationmagazine.fr/feed/" htmlUrl="https://www.frustrationmagazine.fr/"/>
+        <outline title="Inprecor. Derniers articles." text="Inprecor. Derniers articles." description="Inprecor. Derniers articles." type="rss" xmlUrl="https://inprecor.fr/derniers-articles.xml" htmlUrl="https://inprecor.fr/"/>
+        <outline title="Jacobin" text="Jacobin" description="Jacobin" type="atom" xmlUrl="https://jacobin.com/feed/" htmlUrl=""/>
+        <outline title="lvsl.fr – Tout reconstruire, tout réinventer" text="lvsl.fr – Tout reconstruire, tout réinventer" description="lvsl.fr – Tout reconstruire, tout réinventer" type="rss" xmlUrl="https://lvsl.fr/feed/" htmlUrl="https://lvsl.fr/"/>
+        <outline title="Période" text="Période" description="Période" type="rss" xmlUrl="http://revueperiode.net/feed/" htmlUrl="http://revueperiode.net"/>
+        <outline title="Rapports de Force" text="Rapports de Force" description="Rapports de Force" type="rss" xmlUrl="https://rapportsdeforce.fr/feed" htmlUrl="https://rapportsdeforce.fr/"/>
+        <outline title="Nouveaux Cahiers du socialisme" text="Nouveaux Cahiers du socialisme" description="Nouveaux Cahiers du socialisme" type="rss" xmlUrl="https://www.cahiersdusocialisme.org/feed/" htmlUrl="https://www.cahiersdusocialisme.org"/>
+      </outline>
+      <outline title="News" text="News" description="News" type="folder">
+        <outline title="Arrêt sur Images - Le flux RSS" text="Arrêt sur Images - Le flux RSS" description="Arrêt sur Images - Le flux RSS" type="rss" xmlUrl="https://api.arretsurimages.net/api/public/rss/all-content" htmlUrl="https://www.arretsurimages.net/"/>
+        <outline title="Blast - Le souffle de l’info" text="Blast - Le souffle de l’info" description="Blast - Le souffle de l’info" type="rss" xmlUrl="https://api.blast-info.fr/rss.xml" htmlUrl="https://blast-info.fr"/>
+        <outline title="Disclose.ngo" text="Disclose.ngo" description="Disclose.ngo" type="rss" xmlUrl="https://disclose.ngo/feed/" htmlUrl="https://disclose.ngo"/>
+        <outline title="Heidi.news" text="Heidi.news" description="Heidi.news" type="rss" xmlUrl="https://www.heidi.news/articles.rss" htmlUrl="https://www.heidi.news/articles"/>
+        <outline title="Le Courrier d'Europe centrale" text="Le Courrier d'Europe centrale" description="Le Courrier d'Europe centrale" type="rss" xmlUrl="https://courrierdeuropecentrale.fr/feed/" htmlUrl="https://courrierdeuropecentrale.fr/"/>
+        <outline title="Le Grand Continent" text="Le Grand Continent" description="Le Grand Continent" type="rss" xmlUrl="https://legrandcontinent.eu/fr/feed/" htmlUrl="https://legrandcontinent.eu/fr/"/>
+        <outline title="Mediapart" text="Mediapart" description="Mediapart" type="rss" xmlUrl="https://www.mediapart.fr/articles/feed" htmlUrl="https://www.mediapart.fr/"/>
+        <outline title="UsineNouvelle - Actualités A la une" text="UsineNouvelle - Actualités A la une" description="UsineNouvelle - Actualités A la une" type="rss" xmlUrl="https://www.usinenouvelle.com/rss/" htmlUrl="http://www.usinenouvelle.com"/>
+      </outline>
+      <outline title="Nerd" text="Nerd" description="Nerd" type="folder">
+        <outline title="bouletcorp.com" text="bouletcorp.com" description="bouletcorp.com" type="rss" xmlUrl="https://bouletcorp.com/feed/rss.xml" htmlUrl="https://bouletcorp.com"/>
+        <outline title="Korben" text="Korben" description="Korben" type="rss" xmlUrl="https://korben.info/feed" htmlUrl="https://korben.info"/>
+        <outline title="LinuxFr.org : les dépêches" text="LinuxFr.org : les dépêches" description="LinuxFr.org : les dépêches" type="atom" xmlUrl="https://linuxfr.org/news.atom" htmlUrl="https://linuxfr.org/news"/>
+        <outline title="Saturday Morning Breakfast Cereal" text="Saturday Morning Breakfast Cereal" description="Saturday Morning Breakfast Cereal" type="rss" xmlUrl="https://www.smbc-comics.com/comic/rss" htmlUrl="https://www.smbc-comics.com/"/>
+        <outline title="xkcd.com" text="xkcd.com" description="xkcd.com" type="rss" xmlUrl="https://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/"/>
+      </outline>
+    </outline>
+  </body>
+</opml>
