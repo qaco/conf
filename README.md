@@ -1,5 +1,11 @@
 # Debian installation
 
+## Misc
+
+### Timezone
+
+```dpkg-reconfigure tzdata```
+
 ## Internet
 
 ### Changer DNS
