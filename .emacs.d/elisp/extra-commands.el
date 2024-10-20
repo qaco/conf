@@ -24,26 +24,10 @@ point reaches the beginning or end of the buffer, stop there."
     (when (= orig-point (point))
       (move-beginning-of-line 1))))
 
-(defun kill-current-buffer ()
-  (interactive)
-  (kill-buffer (current-buffer)))
-
-(defun newline-above ()
-  (interactive)
-  (end-of-line 0)
-  (newline-and-indent))
-
 (defun new-compile-cmd (nveau)
   "Change the compile command without compiling."
   (interactive "sNew compile command: ")
   (setq compile-command nveau))
-
-(defun kill-other-buffers ()
-    "Kill all other buffers."
-    (interactive)
-    (mapc 'kill-buffer 
-          (delq (current-buffer) 
-                (remove-if-not 'buffer-file-name (buffer-list)))))
 
 (defun yank-and-indent ()
   (interactive)
@@ -105,5 +89,19 @@ char nor indentation (doesn't save anything if blank line.)"
   (interactive)
   (insert "std::error_code err;\n")
   (insert "llvm::raw_fd_ostream stream(\"/dev/stdout\", err);\n"))
+
+(defun show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name)))
+
+(defun copy-file-name ()
+  (interactive)
+  (kill-new (buffer-file-name)))
+
+(defun show-and-copy-file-name ()
+  (interactive)
+  (show-file-name)
+  (copy-file-name))
 
 (provide 'extra-commands)

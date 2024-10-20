@@ -52,7 +52,7 @@ if [ $(id -u) -eq 0 ];
 then
     PS1=" ${BLUE}\W #${WHITE} "
 else
-    PS1=" ${BOLD}${BLUE}\W${REG}${GREEN}\$(parse_git_branch)${BOLD}${BLUE} \$${WHITE} "
+    PS1=" ${BOLD}${BLUE}\W${REG}${GREEN}\$(parse_git_branch)${BOLD}${BLUE} \$${WHITE} \[\e]2;\W\a\]"
 fi
 PS2=" ${WHITE}> "
 
