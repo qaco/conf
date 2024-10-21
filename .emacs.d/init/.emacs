@@ -27,6 +27,8 @@
 ;; Edition defaults
 
 (xterm-mouse-mode 1)
+(global-set-key (kbd "<mouse-4>") 'previous-line)
+(global-set-key (kbd "<mouse-5>") 'next-line)
 (setq scroll-step 1
       auto-window-vscroll nil
       scroll-conservatively 10000) ; scroll one line by one line
@@ -81,6 +83,36 @@
          "%m" ; major mode
          minor-mode-alist ; minor modes
          ))
+
+;; (set-face-attribute 'tab-line nil ;; background behind tabs
+;;                     :foreground (face-foreground 'default)
+;;                     :background (face-background 'default)
+;;                     :distant-foreground (face-background 'default)
+;;                     :underline (face-foreground 'default)
+;;                     :overline (face-background 'default)
+;;                     :height (face-attribute 'default :height)
+;;                     :box nil)
+;; (set-face-attribute 'tab-line-tab-current nil
+;;                     :inherit 'tab-line
+;;                     :foreground (face-foreground 'default)
+;;                     :background (face-background 'highlight)
+;;                     :weight 'regular
+;;                     :box nil)
+;; (set-face-attribute 'tab-line-tab-modified nil
+;;                     :inherit 'tab-line-tab-current
+;;                     :foreground (face-foreground 'link)
+;;                     :box nil)
+;; (set-face-attribute 'tab-line-tab nil ;; active tab in another window
+;;                     :inherit 'tab-line-current
+;;                     :box nil)
+;; (set-face-attribute 'tab-line-tab-inactive nil
+;;                     :inherit 'tab-line
+;;                     :box nil)
+;; (set-face-attribute 'tab-line-highlight nil
+;;                     :inherit 'tab-line-current
+;;                     :foreground (face-foreground 'link)
+;;                     :background 'unspecified
+;;                     :box nil)
 
 ;; Extra packages
 
@@ -142,7 +174,7 @@
 (global-set-key (kbd "<C-M-left>")   'tab-line-switch-to-prev-tab)
 (global-set-key (kbd "C-M-q")   'bury-buffer)
 (global-unset-key (kbd "C-M-t"))
-(global-set-key (kbd "C-M-t")   'tab-line-mode)
+(global-set-key (kbd "C-M-t")   'global-tab-line-mode)
 
 ;; buffers
 (global-set-key (kbd "C-x n") 'switch-to-next-buffer)
