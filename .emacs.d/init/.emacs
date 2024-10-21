@@ -27,6 +27,8 @@
 ;; Edition defaults
 
 (xterm-mouse-mode 1)
+(global-set-key (kbd "<mouse-4>") 'previous-line)
+(global-set-key (kbd "<mouse-5>") 'next-line)
 (setq scroll-step 1
       auto-window-vscroll nil
       scroll-conservatively 10000) ; scroll one line by one line
@@ -45,6 +47,10 @@
 (global-hl-line-mode t) ; highlight the current line
 (global-display-line-numbers-mode 1)  ; show the line numbers on the left
 ;; (setq-default word-wrap t)
+(defun my-term-mode-setup ()
+  "Configuration personnalisée pour `term-mode`."
+  (display-line-numbers-mode -1))
+(add-hook 'term-mode-hook 'my-term-mode-setup)
 
 (fset 'yes-or-no-p 'y-or-n-p) ; y-or-n replaces yes-or-no
 (setq confirm-nonexistent-file-or-buffer nil ; create file without confirmation
@@ -81,6 +87,9 @@
          "%m" ; major mode
          minor-mode-alist ; minor modes
          ))
+
+(setq tab-line-close-button-show nil)
+(setq tab-line-new-button-show nil)
 
 ;; Extra packages
 
@@ -142,7 +151,7 @@
 (global-set-key (kbd "<C-M-left>")   'tab-line-switch-to-prev-tab)
 (global-set-key (kbd "C-M-q")   'bury-buffer)
 (global-unset-key (kbd "C-M-t"))
-(global-set-key (kbd "C-M-t")   'tab-line-mode)
+(global-set-key (kbd "C-M-t")   'global-tab-line-mode)
 
 ;; buffers
 (global-set-key (kbd "C-x n") 'switch-to-next-buffer)
@@ -155,11 +164,11 @@
 ;; manage files
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 ;; (global-set-key (kbd "C-x C-b") 'electric-buffer-list)
-(global-set-key (kbd "C-x b") 'ido-switch-buffer)
+(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
 ;; compile
-(global-set-key (kbd "C-x t") 'eshell)
+(global-set-key (kbd "C-x t") 'term)
 (global-set-key (kbd "C-x D") 'compile)
 (global-set-key (kbd "C-x d") 'recompile)
 (global-set-key (kbd "<f1>") 'compile)
