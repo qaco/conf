@@ -129,12 +129,18 @@
 ;; display informations
 (global-set-key (kbd "C-x \"") 'display-fill-column-indicator-mode)
 (global-set-key (kbd "M-l") 'count-lines-page)
-(global-set-key (kbd "M-P") 'show-and-copy-file-name)
-(global-set-key (kbd "M-p") 'show-file-name)
+(global-set-key (kbd "M-I") 'show-and-copy-file-name)
+(global-set-key (kbd "M-i") 'show-file-name)
 
 ;; edit
-(global-set-key (kbd "<M-down>")   'forward-paragraph)
-(global-set-key (kbd "<M-up>")   'backward-paragraph)
+(global-set-key (kbd "<mouse-4>") 'previous-line)
+(global-set-key (kbd "<mouse-5>") 'next-line)
+(global-set-key (kbd "M-<mouse-4>") 'backward-x-lines)
+(global-set-key (kbd "M-<mouse-5>") 'forward-x-lines)
+(global-set-key (kbd "<M-down>")   'forward-x-lines)
+(global-set-key (kbd "<M-up>")   'backward-x-lines)
+(global-set-key (kbd "M-n") 'forward-x-lines)
+(global-set-key (kbd "M-p") 'backward-x-lines)
 (global-set-key (kbd "M-_") 'undo-only)
 (global-set-key (kbd "C-x :") 'dabbrev-expand)
 
