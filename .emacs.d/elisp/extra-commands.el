@@ -29,6 +29,12 @@ point reaches the beginning or end of the buffer, stop there."
   (interactive "sNew compile command: ")
   (setq compile-command nveau))
 
+(defun forward-x-lines ()
+  (interactive) (forward-line  5))
+
+(defun backward-x-lines ()
+      (interactive) (forward-line  -5))
+
 (defun yank-and-indent ()
   (interactive)
   (yank)

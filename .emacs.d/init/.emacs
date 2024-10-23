@@ -47,6 +47,10 @@
 (global-hl-line-mode t) ; highlight the current line
 (global-display-line-numbers-mode 1)  ; show the line numbers on the left
 ;; (setq-default word-wrap t)
+(defun my-term-mode-setup ()
+  "Configuration personnalisée pour `term-mode`."
+  (display-line-numbers-mode -1))
+(add-hook 'term-mode-hook 'my-term-mode-setup)
 
 (fset 'yes-or-no-p 'y-or-n-p) ; y-or-n replaces yes-or-no
 (setq confirm-nonexistent-file-or-buffer nil ; create file without confirmation
@@ -84,35 +88,8 @@
          minor-mode-alist ; minor modes
          ))
 
-;; (set-face-attribute 'tab-line nil ;; background behind tabs
-;;                     :foreground (face-foreground 'default)
-;;                     :background (face-background 'default)
-;;                     :distant-foreground (face-background 'default)
-;;                     :underline (face-foreground 'default)
-;;                     :overline (face-background 'default)
-;;                     :height (face-attribute 'default :height)
-;;                     :box nil)
-;; (set-face-attribute 'tab-line-tab-current nil
-;;                     :inherit 'tab-line
-;;                     :foreground (face-foreground 'default)
-;;                     :background (face-background 'highlight)
-;;                     :weight 'regular
-;;                     :box nil)
-;; (set-face-attribute 'tab-line-tab-modified nil
-;;                     :inherit 'tab-line-tab-current
-;;                     :foreground (face-foreground 'link)
-;;                     :box nil)
-;; (set-face-attribute 'tab-line-tab nil ;; active tab in another window
-;;                     :inherit 'tab-line-current
-;;                     :box nil)
-;; (set-face-attribute 'tab-line-tab-inactive nil
-;;                     :inherit 'tab-line
-;;                     :box nil)
-;; (set-face-attribute 'tab-line-highlight nil
-;;                     :inherit 'tab-line-current
-;;                     :foreground (face-foreground 'link)
-;;                     :background 'unspecified
-;;                     :box nil)
+(setq tab-line-close-button-show nil)
+(setq tab-line-new-button-show nil)
 
 ;; Extra packages
 
@@ -152,12 +129,18 @@
 ;; display informations
 (global-set-key (kbd "C-x \"") 'display-fill-column-indicator-mode)
 (global-set-key (kbd "M-l") 'count-lines-page)
-(global-set-key (kbd "M-P") 'show-and-copy-file-name)
-(global-set-key (kbd "M-p") 'show-file-name)
+(global-set-key (kbd "M-I") 'show-and-copy-file-name)
+(global-set-key (kbd "M-i") 'show-file-name)
 
 ;; edit
-(global-set-key (kbd "<M-down>")   'forward-paragraph)
-(global-set-key (kbd "<M-up>")   'backward-paragraph)
+(global-set-key (kbd "<mouse-4>") 'previous-line)
+(global-set-key (kbd "<mouse-5>") 'next-line)
+(global-set-key (kbd "M-<mouse-4>") 'backward-x-lines)
+(global-set-key (kbd "M-<mouse-5>") 'forward-x-lines)
+(global-set-key (kbd "<M-down>")   'forward-x-lines)
+(global-set-key (kbd "<M-up>")   'backward-x-lines)
+(global-set-key (kbd "M-n") 'forward-x-lines)
+(global-set-key (kbd "M-p") 'backward-x-lines)
 (global-set-key (kbd "M-_") 'undo-only)
 (global-set-key (kbd "C-x :") 'dabbrev-expand)
 
@@ -187,11 +170,11 @@
 ;; manage files
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 ;; (global-set-key (kbd "C-x C-b") 'electric-buffer-list)
-(global-set-key (kbd "C-x b") 'ido-switch-buffer)
+(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
 ;; compile
-(global-set-key (kbd "C-x t") 'eshell)
+(global-set-key (kbd "C-x t") 'term)
 (global-set-key (kbd "C-x D") 'compile)
 (global-set-key (kbd "C-x d") 'recompile)
 (global-set-key (kbd "<f1>") 'compile)
