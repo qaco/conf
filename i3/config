@@ -16,7 +16,7 @@ set $mod Mod4
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i $(tac /tmp/bg.txt | head -n 1)
 # bindsym $mod+x exec --no-startup-id i3lock -i $(tac /tmp/bg.txt | head -n 1)
 # bindsym $mod+Shift+c exec "feh --bg-fill $(find ~/Images/Wallpapers/Favoris/ -type f | shuf -n 1 | tee -a /tmp/bg.txt)"
-bindsym $mod+x exec --no-startup-id i3lock -i ~/Images/galaxy.png
+bindsym $mod+x exec --no-startup-id i3lock -i ~/Images/nasa.png
 bindsym $mod+Shift+x exec --no-startup-id systemctl suspend
 # reload the configuration file
 bindsym $mod+Shift+r restart
@@ -124,9 +124,12 @@ include /home/hpompougnac/conf/i3/shortcuts-apps.conf
 include /home/hpompougnac/conf/i3/shortcuts-windows.conf
 
 default_border pixel 2
-exec --no-startup-id feh --bg-fill ~/Images/galaxy.png
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/Images/galaxy.png
+exec --no-startup-id feh --bg-fill ~/Images/nasa.png
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/Images/nasa.png
+exec --no-startup-id caffeine-indicator
 
 exec_always --no-startup-id mate-volume-control-status-icon # from mate-media
+
+exec --no-startup-id xmodmap -e "keycode 16 = egrave 7 egrave 7 grave Egrave grave"
 
 for_window [class="Eom" instance="eom"] floating enable
