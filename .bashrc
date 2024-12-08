@@ -73,7 +73,7 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
+    alias grep='grep --exclude-dir venv -I --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -121,10 +121,10 @@ export VISUAL="emacs -nw"
 export EDITOR="$VISUAL"
 if tty | grep -q 'tty'; then
     alias emacsclient="TERM=xterm-256color emacsclient -nw -c --alternate-editor= "
-    alias emacs="TERM=xterm-256color emacsclient -nw -c --alternate-editor= "
+    alias emacs="TERM=xterm-256color emacs -nw"
 else
     alias emacsclient="emacsclient -nw -c --alternate-editor= "
-    alias emacs="emacsclient -nw -c --alternate-editor= "
+    alias emacs="emacs -nw"
 fi
 
 alias mc="TERM=xterm-256color mc"
@@ -134,9 +134,9 @@ export PATH=$PATH:~/conf/scripts/
 
 alias mvlc='nvlc -Z --no-metadata-network-access'
 alias cvlc='cvlc -Z --no-metadata-network-access'
-alias nterm='mate-terminal --window'
-
+alias glg='git log --graph --oneline'
 alias pdflatex='pdflatex -halt-on-error'
+alias neofetch='neofetch --gtk3 off --disable memory uptime'
 # Reminder:
 
 # Rip
