@@ -6,6 +6,14 @@
 
 ```dpkg-reconfigure tzdata```
 
+### Hibernation
+
+Without hibernation, do ```systemctl suspend```
+
+For hibernation you need:
++ [Configure GRUB](https://www.hibit.dev/posts/88/how-to-enable-hibernation-in-linux)
++ [Recompile the kernel](https://cateee.net/lkddb/web-lkddb/HIBERNATION.html)
+
 ## Internet
 
 ### Changer DNS
@@ -19,6 +27,10 @@ update-alternatives: usage of « /usr/bin/i3 » to provide « /usr/bin/x-window-
 Sinon :
 * ```xdg-settings get default-web-browser```
 * ```xdg-settings set default-web-browser firefox-esr.desktop```
+
+With 4k monitors, putting ```Xcursor.size: 24``` in the file
+```/etc/X11/Xresources/x11-common``` may be needed to fix the cursor
+size.
 
 ### Mate + i3
 
@@ -138,7 +150,9 @@ sudo apt install nvidia-driver-libs:i386
 
 ### Disks
 
-Usb mounting with ```usbmount```:
+Installing caja is the best solution.
+
+Alternative, USB mounting with ```usbmount```:
 * package created from https://github.com/rbrito/usbmount
 * ```for f in /media/usb*; do echo "$f"; ls "$f"; done```
 * ```FILESYSTEMS="vfat ext2 ext3 ext4 hfsplus ntfs exfat"```

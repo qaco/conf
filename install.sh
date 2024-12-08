@@ -7,7 +7,7 @@ rm ~/.profile
 
 ln -s ~/conf/.bashrc ~/.bashrc
 ln -s ~/conf/.profile ~/.profile
-ln -s ~/conf/.emacs.d/init/.emacs ~/.emacs
+ln -s ~/conf/.emacs.d/init.el ~/.emacs
 mkdir ~/.saves
 touch ~/.paths
 
