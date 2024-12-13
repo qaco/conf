@@ -2,6 +2,11 @@
 
 (add-to-list
  'package-archives
+ '("gnu" . "https://elpa.gnu.org/packages/")
+ t)
+
+(add-to-list
+ 'package-archives
  '("melpa" . "http://melpa.org/packages/")
  t)
 (add-to-list

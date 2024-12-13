@@ -1,3 +1,59 @@
+;; display informations
+(global-set-key (kbd "C-x \"") 'display-fill-column-indicator-mode)
+(global-set-key (kbd "C-x l") 'count-lines-page)
+
+;; windows
+(global-set-key (kbd "C-x 2") 'split-window-below-and-center-cursor)
+(global-set-key (kbd "M-=") 'enlarge-window)
+(global-set-key (kbd "M--") 'shrink-window)
+(global-set-key (kbd "C-x N") 'other-window)
+(global-set-key (kbd "C-x P") #'(lambda() (interactive) (other-window -1)))
+(global-set-key (kbd "<C-right>")   'windmove-right)
+(global-set-key (kbd "<C-left>")   'windmove-left)
+(global-set-key (kbd "<C-up>")   'windmove-up)
+(global-set-key (kbd "<C-down>")   'windmove-down)
+
+;; edit
+(advice-add 'comment-region :before #'copy-region-as-kill)
+(global-set-key (kbd "C-q")   'delete-region)
+(global-set-key (kbd "C-j") #'(lambda() (interactive) (delete-region (point) (line-end-position))))
+(global-set-key (kbd "M-_") 'undo-only)
+(global-set-key (kbd "C-x :") 'dabbrev-expand)
+(global-set-key (kbd "C-x q") 'join-line)
+(global-set-key
+ (kbd "C-w")
+ #'(lambda() (interactive) (if mark-active (kill-region (mark) (point)) (wise-kill-line))))
+(global-set-key
+ (kbd "M-w")
+ #'(lambda() (interactive) (if mark-active (copy-region-as-kill (mark) (point)) (wise-copy-line))))
+
+;; navigation
+(global-set-key (kbd "C-a") 'smarter-beginning-of-line)
+(global-set-key (kbd "<mouse-4>") 'previous-line)
+(global-set-key (kbd "<mouse-5>") 'next-line)
+(global-set-key (kbd "M-<mouse-4>") #'(lambda() (interactive) (forward-line -5)))
+(global-set-key (kbd "M-<mouse-5>") #'(lambda() (interactive) (forward-line 5)))
+(global-set-key (kbd "<M-down>") #'(lambda() (interactive) (forward-line 5)))
+(global-set-key (kbd "<M-up>") #'(lambda() (interactive) (forward-line -5)))
+(global-set-key (kbd "M-n") #'(lambda() (interactive) (forward-line 5)))
+(global-set-key (kbd "M-p") #'(lambda() (interactive) (forward-line -5)))
+
+;; buffers
+
+(global-set-key (kbd "C-x C-<up>")     #'(lambda() (interactive) (swap-buffer-with-adjacent 'above)))
+(global-set-key (kbd "C-x C-<down>")   #'(lambda() (interactive) (swap-buffer-with-adjacent 'below)))
+(global-set-key (kbd "C-x C-<left>")   #'(lambda() (interactive) (swap-buffer-with-adjacent 'left)))
+(global-set-key (kbd "C-x C-<right>")  #'(lambda() (interactive) (swap-buffer-with-adjacent 'right)))
+(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
+
+;; System
+(global-set-key (kbd "C-x C-w") 'write-file)
+(global-set-key (kbd "C-x w") 'save-buffer-copy)
+(global-set-key (kbd "C-x t") 'term)
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+(global-set-key (kbd "M-o i") #'(lambda() (interactive) (message (buffer-file-name))))
+(global-set-key (kbd "M-o M-i") #'(lambda() (interactive) (kill-new (message (buffer-file-name)))))
+
 ;; External tools
 
 (defvar browse-url-browser-function 'browse-url-firefox)
@@ -6,6 +62,8 @@
 ;; Edition defaults
 
 (global-auto-revert-mode t)
+(save-place-mode 1)
+(setq save-place-forget-unreadable-files nil)
 
 ;; recentf
 (require 'recentf)
@@ -14,8 +72,6 @@
 
 ;; Mouse in the therminal
 (xterm-mouse-mode 1)
-(global-set-key (kbd "<mouse-4>") 'previous-line)
-(global-set-key (kbd "<mouse-5>") 'next-line)
 
 ;; Scroll one line at a time
 (setq scroll-step 1
@@ -35,15 +91,6 @@
 
 (show-paren-mode t) ; highlight matching parentheses
 (global-hl-line-mode t) ; highlight the current line
-(global-display-line-numbers-mode 1)  ; show line numbers
-;; (setq-default word-wrap t)
-
-;; Disable line numbers in term and eshell modes
-(defun my-term-mode-setup ()
-  "Custom configuration for `term-mode`."
-  (display-line-numbers-mode -1))
-(add-hook 'term-mode-hook 'my-term-mode-setup)
-(add-hook 'eshell-mode-hook 'my-term-mode-setup)
 
 ;; Less confirms
 (fset 'yes-or-no-p 'y-or-n-p) ; use y/n instead of yes/no
@@ -51,9 +98,10 @@
       vc-follow-symlinks nil ; follows symlinks
       revert-without-query '(".*")) ; reverts buffer
 
-;; Ido bheaviour
-(ido-mode 1)
-(ido-vertical-mode 1)
+(icomplete-mode 1)
+(setq read-file-name-completion-ignore-case t)
+(setq read-file-name-function 'read-file-name-default)
+
 (fido-vertical-mode 1)
 (setq ido-everywhere t
       ido-create-new-buffer 'always
@@ -84,10 +132,12 @@
          "%l,%c (%p)" ; position in buffer
          "    "
          "%m" ; major mode
-         minor-mode-alist ; minor modes
+         ;; minor-mode-alist ; minor modes
          ))
 
-;; Mode hooks
+;; Hooks
+
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 ;; term and eshell modes hooks
 (defun my-term-mode-setup ()
@@ -103,50 +153,28 @@
 
 (load-theme 'modus-vivendi t)
 
-;; display informations
-(global-set-key (kbd "C-x \"") 'display-fill-column-indicator-mode)
-(global-set-key (kbd "M-l") 'count-lines-page)
-(global-set-key (kbd "M-I") 'show-and-copy-file-name)
-(global-set-key (kbd "M-i") #'(lambda() (interactive) (message (buffer-file-name))))
-(global-set-key (kbd "M-I") #'(lambda() (interactive) (kill-new (buffer-file-name))))
+;; Fonctions
 
-;; windows
-(global-set-key (kbd "M-=") 'enlarge-window)
-(global-set-key (kbd "M--") 'shrink-window)
-(global-set-key (kbd "C-x N") 'other-window)
-(global-set-key (kbd "C-x P") #'(lambda() (interactive) (other-window -1)))
-(global-set-key (kbd "<C-right>")   'windmove-right)
-(global-set-key (kbd "<C-left>")   'windmove-left)
-(global-set-key (kbd "<C-up>")   'windmove-up)
-(global-set-key (kbd "<C-down>")   'windmove-down)
+(defun swap-buffer-with-adjacent (direction)
+  "Swap the current buffer with the buffer in the adjacent window in the specified DIRECTION,
+and move the cursor to the adjacent window."
+  (let ((current-window (selected-window))
+        (other-window (window-in-direction direction)))
+    (when other-window
+      (let ((current-buffer (window-buffer current-window))
+            (other-buffer (window-buffer other-window)))
+        (set-window-buffer current-window other-buffer)
+        (set-window-buffer other-window current-buffer)
+        (select-window other-window)))))
 
-;; buffers
-(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
-(global-set-key (kbd "C-x n") 'switch-to-next-buffer)
-(global-set-key (kbd "C-x p") 'switch-to-prev-buffer)
-
-;; edit
-(advice-add 'comment-region :before #'copy-region-as-kill)
-(global-set-key (kbd "C-q")   'backward-delete-char-untabify)
-(global-set-key (kbd "M-_") 'undo-only)
-(global-set-key (kbd "C-x :") 'dabbrev-expand)
-(global-set-key (kbd "C-x q") 'join-line)
-(global-set-key (kbd "C-w") 'kill-region-or-line)
-(global-set-key (kbd "M-w") 'copy-region-or-line)
-(global-set-key (kbd "C-a") 'smarter-beginning-of-line)
-
-;; navigation
-(global-set-key (kbd "<mouse-4>") 'previous-line)
-(global-set-key (kbd "<mouse-5>") 'next-line)
-(global-set-key (kbd "M-<mouse-4>") #'(lambda() (interactive) (forward-line -5)))
-(global-set-key (kbd "M-<mouse-5>") #'(lambda() (interactive) (forward-line 5)))
-(global-set-key (kbd "<M-down>") #'(lambda() (interactive) (forward-line 5)))
-(global-set-key (kbd "<M-up>") #'(lambda() (interactive) (forward-line -5)))
-(global-set-key (kbd "M-n") #'(lambda() (interactive) (forward-line 5)))
-(global-set-key (kbd "M-p") #'(lambda() (interactive) (forward-line -5)))
-
-(global-set-key (kbd "C-x t") 'term)
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+(defun split-window-below-and-center-cursor ()
+  "Split the window horizontally and center the cursor both in the old window and in the new one."
+  (interactive)
+  (let ((current-window (selected-window)))
+    (select-window (split-window-below))
+    (recenter-top-bottom)
+    (select-window current-window)
+    (recenter-top-bottom)))
 
 (defun smarter-beginning-of-line (arg)
   
@@ -179,9 +207,17 @@ point reaches the beginning or end of the buffer, stop there."
 	  (delete-region (point) (+ 1 (line-end-position)))
 	(delete-region (point) (line-end-position))))
 
-(defun wise-copy-line (should-kill)
+(defun wise-copy-line ()
+  (interactive)
+  (wise-kill-or-copy-line nil))
 
-  "Kills the current line preserving column position. Doesn't save nor newline
+(defun wise-kill-line ()
+  (interactive)
+  (wise-kill-or-copy-line 1))
+
+(defun wise-kill-or-copy-line (should-kill)
+
+  "Copy/kill the current line preserving column position. Doesn't save nor newline
 char nor indentation (doesn't save anything if blank line.)"
   
   (interactive)
@@ -201,31 +237,17 @@ char nor indentation (doesn't save anything if blank line.)"
     ;; Restore the column position
     (move-to-column former-column)))
 
-(defun kill-region-or-line ()
-
-  "Kills marked region if exists, current line otherwise."
-  
-  (interactive)
-
-  (if mark-active
-      (kill-region (mark) (point))
-    (wise-copy-line 1)))
-
-(defun copy-region-or-line ()
-
-  "Saves marked region if exists, current line otherwise."
-  
-  (interactive)
-
-  (if mark-active
-      (copy-region-as-kill (mark) (point))
-    (wise-copy-line nil)))
-
 (defun ido-recentf-open ()
   "Use `ido-completing-read' to \[find-file] a recent file"
   (interactive)
   (if (find-file (ido-completing-read "Find recent file: " recentf-list))
       (message "Opening file...")
     (message "Aborting")))
+
+(defun save-buffer-copy (filename)
+  "Save a copy of the current buffer to a specified FILENAME without changing the buffer."
+  (interactive "FSave buffer copy to file: ")
+  (write-region (point-min) (point-max) filename)
+  (message "Buffer saved to %s" filename))
 
 (provide 'standalone)
