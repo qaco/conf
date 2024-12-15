@@ -49,7 +49,7 @@
   :config
   (which-key-mode))
 
-;; Edition
+;; Edition & navigation
 
 (use-package avy
   :ensure t
@@ -86,6 +86,12 @@
   :ensure t
   :bind ("C-x v t" . git-timemachine))
 
+;; Displays the git blame on the current line
+;; (use-package blamer
+;;   :ensure t
+;;   :config
+;;   (global-blamer-mode 1))
+
 (use-package git-gutter
   :ensure t
   :hook ((prog-mode . git-gutter-mode)
@@ -95,85 +101,6 @@
   (set-face-foreground 'git-gutter:added "green")
   (set-face-foreground 'git-gutter:deleted "red")
   :bind ("C-x v a" . 'git-gutter:stage-hunk))
-
-(global-set-key (kbd "C-x v A") 'my-git-add-update)
-(global-set-key (kbd "C-x v c") 'my-git-commit)
-(global-set-key (kbd "C-x v C") 'my-git-amend)
-(global-set-key (kbd "C-x v p") 'my-git-push)
-
-(defun my-git-add-update()
-  "Run 'git add -u' in the current directory. Display the list of
-   files to be staged and ask for confirmation before proceeding."
-  (interactive)
-  (let* ((default-directory (if (buffer-file-name)
-                                (file-name-directory (buffer-file-name))
-                              default-directory))
-         (staged-files (shell-command-to-string "git diff --name-only --cached"))
-         (unstaged-files (shell-command-to-string "git diff --name-only")))
-    (if (string-empty-p unstaged-files)
-        (message "No changes to stage.")
-      (if (yes-or-no-p (format "The following files will be staged:\n%s\nProceed? " unstaged-files))
-          (progn
-            (shell-command "git add -u")
-            (message "Files staged:\n%s" (shell-command-to-string "git diff --name-only --cached")))
-        (message "Operation canceled.")))))
-
-(defun my-git-commit ()
-  "Run 'git commit' in the current directory. Prompt for a commit
-    message in the minibuffer. If the commit fails, display the error
-    message in the minibuffer."
-  (interactive)
-  (let ((commit-message (read-string "Commit message: ")))
-    (with-temp-buffer
-      (let ((exit-code
-             (call-process-shell-command
-              (concat "git commit -m " (shell-quote-argument commit-message))
-              nil t)))
-        (if (eq exit-code 0)
-            (message "Commit successful!")
-          (let ((error-message (buffer-string)))
-            (message "Commit failed: %s" error-message)))))))
-
-(defun my-git-amend ()
-  "Run 'git commit --amend --no-edit' in the current directory. If
-   the commit fails, display the error message in the minibuffer."
-  (interactive)
-  (with-temp-buffer
-    (let ((exit-code
-           (call-process-shell-command "git commit --amend --no-edit" nil t)))
-      (if (eq exit-code 0)
-          (message "Amend successful!")
-        (let ((error-message (buffer-string)))
-          (message "Amend failed: %s" error-message))))))
-
-(defun my-git-push ()
-  "Run 'git push origin' in the current directory. Prompt for the
-   branch to push in the minibuffer. The default branch is 'main'
-   or 'master' based on what is present locally. If the push fails,
-   display the error message in the minibuffer."
-  (interactive)
-  (let* ((default-branch
-           (if (zerop (call-process-shell-command "git rev-parse --verify main" nil nil))
-               "main"
-             (if (zerop (call-process-shell-command "git rev-parse --verify master" nil nil))
-                 "master"
-               (error "Neither 'main' nor 'master' branch exists"))))
-         (branch (read-string (format "Branch to push (default %s): " default-branch) nil nil default-branch)))
-    (with-temp-buffer
-      (let ((exit-code
-             (call-process-shell-command
-              (concat "git push origin " branch)
-              nil t)))
-        (if (eq exit-code 0)
-            (message "Push successful!")
-          (let ((error-message (buffer-string)))
-            (message "Push failed: %s" error-message)))))))
-
-;; Displays the git blame on the current line
-;; (use-package blamer
-;;   :ensure t
-;;   :config
-;;   (global-blamer-mode 1))
 
 ;; Emacs as an IDE
 

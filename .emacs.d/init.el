@@ -29,6 +29,7 @@
 (setq backup-directory-alist `(("." . "~/.saves")))
 
 (require 'standalone)
+(require 'myfuns)
+(require 'mlir-mode)
 (require 'extra)
 
-(require 'mlir-mode)
