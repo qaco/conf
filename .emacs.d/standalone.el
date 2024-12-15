@@ -20,12 +20,12 @@
 (global-set-key (kbd "M-_") 'undo-only)
 (global-set-key (kbd "C-x :") 'dabbrev-expand)
 (global-set-key (kbd "C-x q") 'join-line)
-(global-set-key
- (kbd "C-w")
- #'(lambda() (interactive) (if mark-active (kill-region (mark) (point)) (wise-kill-line))))
-(global-set-key
- (kbd "M-w")
- #'(lambda() (interactive) (if mark-active (copy-region-as-kill (mark) (point)) (wise-copy-line))))
+(global-set-key (kbd "C-w") #'(lambda() (interactive) (if mark-active
+                                                          (kill-region (mark) (point))
+                                                        (wise-kill-line))))
+(global-set-key (kbd "M-w") #'(lambda() (interactive) (if mark-active
+                                                          (copy-region-as-kill (mark) (point))
+                                                        (wise-copy-line))))
 
 ;; navigation
 (global-set-key (kbd "C-a") 'smarter-beginning-of-line)
@@ -50,7 +50,6 @@
 (global-set-key (kbd "C-x C-w") 'write-file)
 (global-set-key (kbd "C-x w") 'save-buffer-copy)
 (global-set-key (kbd "C-x t") 'term)
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 (global-set-key (kbd "M-o i") #'(lambda() (interactive) (message (buffer-file-name))))
 (global-set-key (kbd "M-o M-i") #'(lambda() (interactive) (kill-new (message (buffer-file-name)))))
 
@@ -64,11 +63,6 @@
 (global-auto-revert-mode t)
 (save-place-mode 1)
 (setq save-place-forget-unreadable-files nil)
-
-;; recentf
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-saved-items 50)
 
 ;; Mouse in the therminal
 (xterm-mouse-mode 1)
@@ -236,13 +230,6 @@ char nor indentation (doesn't save anything if blank line.)"
       (wise-kill-whitespaces))
     ;; Restore the column position
     (move-to-column former-column)))
-
-(defun ido-recentf-open ()
-  "Use `ido-completing-read' to \[find-file] a recent file"
-  (interactive)
-  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
 
 (defun save-buffer-copy (filename)
   "Save a copy of the current buffer to a specified FILENAME without changing the buffer."

@@ -16,6 +16,11 @@
 (setq package-install-upgrade-built-in t)
 (package-initialize)
 
+(add-to-list 'display-buffer-alist
+             '("\\`\\*\\(Warnings\\|Compile-Log\\)\\*\\'"
+               (display-buffer-no-window)
+               (allow-no-window . t)))
+
 ;; Environment variables
 
 (setq load-path (append load-path '("~/conf/.emacs.d/elisp")))
