@@ -86,68 +86,71 @@ char nor indentation (doesn't save anything if blank line.)"
   (write-region (point-min) (point-max) filename)
   (message "Buffer saved to %s" filename))
 
+(defun my-git-get-repo-root ()
+  "Return the root directory of the current Git repository."
+  (string-trim (shell-command-to-string "git rev-parse --show-toplevel")))
+
+(defun my-git-get-files (command)
+  "Return the list of files from the specified Git COMMAND."
+  (split-string (shell-command-to-string command) "\n" t))
+
+(defun my-git-add-files (files)
+  "Ask for confirmation before staging each file in FILES."
+  (let ((total (length files)))
+    (dolist (file files)
+      (let ((index (1+ (cl-position file files :test 'equal))))
+        (when (yes-or-no-p (format "Stage file %s? (%d/%d) " file index total))
+          (shell-command (concat "git add " (shell-quote-argument file)))
+          (message "Staging file: %s" file))
+        ;; Fermer le minibuffer et donner le temps à Emacs de rafraîchir
+        (message "")
+        (sit-for 0.1))))
+  (message "Staging complete."))
+
+(defun my-git-run-command (command success-message failure-message)
+  "Run a Git COMMAND and display a SUCCESS-MESSAGE if successful, or a FAILURE-MESSAGE if it fails."
+  (with-temp-buffer
+    (let ((exit-code (call-process-shell-command command nil t)))
+      (if (eq exit-code 0)
+          (message success-message)
+        (let ((error-message (buffer-string)))
+          (message "%s: %s" failure-message error-message))))))
+
 (defun my-git-add-update ()
-  "Run 'git add -u' from the root of the current Git repository. Ask
-   for confirmation for each file before staging it. Display the
-   index of the current file and the total number of files to be
-   processed. If the user refuses, move to the next file."
+  "Run 'git add -u' from the root of the current Git repository. Ask for confirmation for each file before staging it."
   (interactive)
-  (let* ((repo-root (string-trim (shell-command-to-string "git rev-parse --show-toplevel")))
-         (default-directory repo-root)
-         (unstaged-files (split-string (shell-command-to-string "git diff --name-only") "\n" t)))
-    (let ((total (length unstaged-files)))
-      (dolist (file unstaged-files)
-        (let ((index (1+ (cl-position file unstaged-files :test 'equal))))
-          (when (yes-or-no-p (format "Stage file %s? (%d/%d) " file index total))
-            (shell-command (concat "git add " (shell-quote-argument file)))
-            (message "Staging file: %s" file))
-          (message "")
-          (sit-for 0.1))))
-    (message "Staging complete.")))
+  (let ((default-directory (my-git-get-repo-root))
+        (unstaged-files (my-git-get-files "git diff --name-only")))
+    (my-git-add-files unstaged-files)))
+
+(defun my-git-add-all ()
+  "Run 'git add' from the root of the current Git repository. Ask for confirmation for each file before staging it."
+  (interactive)
+  (let* ((default-directory (my-git-get-repo-root))
+         (unstaged-files (my-git-get-files "git diff --name-only"))
+         (untracked-files (my-git-get-files "git ls-files --others --exclude-standard"))
+         (all-files (append unstaged-files untracked-files)))
+    (my-git-add-files(all-files))))
 
 (defun my-git-commit ()
-  "Run 'git commit' in the current directory. Prompt for a commit
-    message in the minibuffer. If the commit fails, display the error
-    message in the minibuffer."
+  "Run 'git commit' in the current directory. Prompt for a commit message in the minibuffer."
   (interactive)
   (let ((commit-message (read-string "Commit message: ")))
-    (with-temp-buffer
-      (let ((exit-code
-             (call-process-shell-command
-              (concat "git commit -m " (shell-quote-argument commit-message))
-              nil t)))
-        (if (eq exit-code 0)
-            (message "Commit successful!")
-          (let ((error-message (buffer-string)))
-            (message "Commit failed: %s" error-message)))))))
+    (my-git-run-command (concat "git commit -m " (shell-quote-argument commit-message))
+                        "Commit successful!" "Commit failed")))
 
 (defun my-git-amend ()
-  "Run 'git commit --amend --no-edit' in the current directory. If
-   the commit fails, display the error message in the minibuffer."
+  "Run 'git commit --amend --no-edit' in the current directory. If the commit fails, display the error message in the minibuffer."
   (interactive)
-  (with-temp-buffer
-    (let ((exit-code
-           (call-process-shell-command "git commit --amend --no-edit" nil t)))
-      (if (eq exit-code 0)
-          (message "Amend successful!")
-        (let ((error-message (buffer-string)))
-          (message "Amend failed: %s" error-message))))))
+  (my-git-run-command "git commit --amend --no-edit"
+                      "Amend successful!" "Amend failed"))
 
 (defun my-git-push ()
-  "Run 'git push origin' in the current directory. Prompt for the
-   branch to push in the minibuffer. The default branch is the current
-   branch. If the push fails, display the error message in the minibuffer."
+  "Run 'git push origin' in the current directory. Prompt for the branch to push in the minibuffer. The default branch is the current branch."
   (interactive)
   (let* ((current-branch (string-trim (shell-command-to-string "git branch --show-current")))
          (branch (read-string (format "Branch to push (default %s): " current-branch) nil nil current-branch)))
-    (with-temp-buffer
-      (let ((exit-code
-             (call-process-shell-command
-              (concat "git push origin " (shell-quote-argument branch))
-              nil t)))
-        (if (eq exit-code 0)
-            (message "Push successful!")
-          (let ((error-message (buffer-string)))
-            (message "Push failed: %s" error-message)))))))
+    (my-git-run-command (concat "git push origin " (shell-quote-argument branch))
+                        "Push successful!" "Push failed")))
 
 (provide 'myfuns)

@@ -48,7 +48,8 @@
 
 ;; Git
 
-(global-set-key (kbd "C-x v A") 'my-git-add-update)
+(global-set-key (kbd "C-x v A") 'my-git-add-all)
+(global-set-key (kbd "C-x v u") 'my-git-add-update)
 (global-set-key (kbd "C-x v c") 'my-git-commit)
 (global-set-key (kbd "C-x v C") 'my-git-amend)
 (global-set-key (kbd "C-x v p") 'my-git-push)
