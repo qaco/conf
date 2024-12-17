@@ -131,5 +131,6 @@ exec --no-startup-id caffeine-indicator
 exec_always --no-startup-id mate-volume-control-status-icon # from mate-media
 
 exec --no-startup-id xmodmap -e "keycode 16 = egrave 7 egrave 7 grave Egrave grave"
-
+exec --no-startup-id xmodmap -e "keycode 49 = at numbersign at numbersign"
+exec --no-startup-id xmodmap -e "keycode 105 = Multi_key"
 for_window [class="Eom" instance="eom"] floating enable

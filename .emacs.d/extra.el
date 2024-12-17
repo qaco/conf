@@ -1,11 +1,9 @@
-(setq package-install-upgrade-built-in t)
-
 ;; Elisp primitives
 
-(use-package company
+(use-package seq
   :ensure t)
 
-;; Emacs global
+;; File & buffer management
 
 (use-package recentf
   :ensure t
@@ -23,22 +21,40 @@
   :config
   (setq ibuffer-expert t))
 
+;; Window management
+
 ;; C-x w <n>: go to window n (kill if negative)
 (use-package winum
   :ensure t
   :config
   (winum-mode))
 
-;; Show descriptions in fido
-;; (use-package marginalia
-;;   :ensure t
-;;   :config
-;;   (marginalia-mode))
+(use-package windresize
+  :ensure t
+  :bind
+  ("C-c w" . windresize))
+
+(use-package avy
+  :ensure t
+  :bind
+  ("M-g c" . avy-goto-char)
+  ("M-g l" . avy-goto-line)
+  ("M-g w" . avy-goto-word-1))
+
+;; System
 
 (use-package xclip
   :ensure t
   :config
   (xclip-mode 1))
+
+;; Doc
+
+;; Show descriptions in fido
+;; (use-package marginalia
+;;   :ensure t
+;;   :config
+;;   (marginalia-mode))
 
 (use-package free-keys
   :ensure t
@@ -49,24 +65,12 @@
   :config
   (which-key-mode))
 
-;; Edition & navigation
-
-(use-package avy
-  :ensure t
-  :bind
-  ("M-g c" . avy-goto-char)
-  ("M-g l" . avy-goto-line)
-  ("M-g w" . avy-goto-word-1))
+;; Emacs-style edition
 
 (use-package move-text
   :ensure t
   :bind (("C-M-<up>" . move-text-up)
          ("C-M-<down>" . move-text-down)))
-
-(use-package smartparens
-  :ensure t
-  :config
-  (smartparens-global-mode t))
 
 (use-package anzu
   :ensure t
@@ -75,80 +79,18 @@
   :bind (("M-%" . anzu-query-replace)
          ("C-M-%" . anzu-query-replace-regexp)))
 
-;; Git
-
-(use-package magit
-  :ensure t
-  :config
-  (setq magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
-
-(use-package git-timemachine
-  :ensure t
-  :bind ("C-x v t" . git-timemachine))
-
-;; Displays the git blame on the current line
-;; (use-package blamer
-;;   :ensure t
-;;   :config
-;;   (global-blamer-mode 1))
-
-(use-package git-gutter
-  :ensure t
-  :hook ((prog-mode . git-gutter-mode)
-         (text-mode . git-gutter-mode))
-  :config
-  (set-face-background 'git-gutter:modified "purple")
-  (set-face-foreground 'git-gutter:added "green")
-  (set-face-foreground 'git-gutter:deleted "red")
-  :bind ("C-x v a" . 'git-gutter:stage-hunk))
-
-;; Emacs as an IDE
-
-(use-package highlight-indentation
-  :ensure t
-  :config
-  (setq highlight-indentation-blank-lines t)
-  :hook (prog-mode . highlight-indentation-mode))
-
-(use-package rainbow-delimiters
-  :ensure t
-  :hook ((emacs-lisp-mode . rainbow-delimiters-mode)
-         (z3-mode . rainbow-delimiters-mode)))
-
-;; Maybe redundant with eglot ?
-;; M-. is 'go to definition'
-(use-package lsp-mode
-  :ensure t
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  :config
-  (setq lsp-auto-configure-environment 'force)
-  (lsp-enable-which-key-integration t)
-  (add-hook 'python-mode-hook 'lsp))
-
-(use-package company
-  :ensure t)
-
-;; The installation of pyright system-wide (using npm) is required
-;; Derived from https://blog.serghei.pl/posts/emacs-python-ide/
-(use-package lsp-pyright
-  :ensure t
-  :custom
-  (lsp-pyright-langserver-command "pyright")
-  :hook
-  (python-mode . (lambda () (require 'lsp-pyright) (lsp))))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(z3-mode use-package boogie-friends)))
+ '(package-selected-packages
+   '(company-lsp z3-mode yafolding xclip winum windresize which-key use-package undo-tree swiper smartparens rainbow-delimiters projectile persistent-scratch origami multi-vterm move-text modern-cpp-font-lock minimap marginalia magit lsp-ui lsp-pyright highlight-indentation highlight-indent-guides git-timemachine git-gutter free-keys expand-region eglot dashboard consult boogie-friends blamer avy anzu)))
+
+(provide 'extra)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-(provide 'extra)
