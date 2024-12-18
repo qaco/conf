@@ -43,10 +43,9 @@
 
 ;; System
 
-(use-package xclip
+(use-package clipetty
   :ensure t
-  :config
-  (xclip-mode 1))
+  :hook (after-init . global-clipetty-mode))
 
 ;; Doc
 
