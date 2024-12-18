@@ -1,7 +1,5 @@
 ;; Packages
 
-(setq custom-file null-device)
-
 (add-to-list
  'package-archives
  '("melpa-stable" . "https://stable.melpa.org/packages/")
@@ -19,7 +17,7 @@
 ;; Environment variables
 
 (setq load-path (append load-path '("~/conf/.emacs.d/elisp")))
-(setq custom-file "~/conf/.emacs.d/extra.el")
+(setq custom-file null-device)
 (setq load-path (append load-path '("~/conf/.emacs.d")))
 (setq backup-directory-alist `(("." . "~/.saves")))
 
