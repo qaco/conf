@@ -28,6 +28,7 @@
 (require 'mlir-mode)
 (require 'tablegen-mode)
 (require 'git)
+(require 'org-conf)
 (require 'console)
 (require 'ide)
 (require 'extra)
