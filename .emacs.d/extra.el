@@ -79,18 +79,4 @@
   :bind (("M-%" . anzu-query-replace)
          ("C-M-%" . anzu-query-replace-regexp)))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(company-lsp z3-mode yafolding xclip winum windresize which-key use-package undo-tree swiper smartparens rainbow-delimiters projectile persistent-scratch origami multi-vterm move-text modern-cpp-font-lock minimap marginalia magit lsp-ui lsp-pyright highlight-indentation highlight-indent-guides git-timemachine git-gutter free-keys expand-region eglot dashboard consult boogie-friends blamer avy anzu)))
-
 (provide 'extra)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

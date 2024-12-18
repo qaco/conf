@@ -24,17 +24,43 @@
   (set-face-foreground 'git-gutter:added "green")
   (set-face-foreground 'git-gutter:deleted "red")
   :bind
-  ("C-x v a" . 'git-gutter:stage-hunk)
+  ("C-x v h" . 'git-gutter:stage-hunk)
   ("C-x v n" . 'git-gutter:next-hunk)
   ("C-x v p" . 'git-gutter:previous-hunk)
   ("C-x v r" . 'git-gutter:revert-hunk)
   )
 
+(custom-set-variables
+ '(git-gutter:update-interval 2))
+
+(global-set-key (kbd "C-x v a") 'my-git-add)
 (global-set-key (kbd "C-x v A") 'my-git-add-all)
 (global-set-key (kbd "C-x v u") 'my-git-add-update)
 (global-set-key (kbd "C-x v c") 'my-git-commit)
 (global-set-key (kbd "C-x v C") 'my-git-amend)
 (global-set-key (kbd "C-x v p") 'my-git-push)
+(global-set-key (kbd "C-x v H") 'my-git-stage-hunks)
+
+(defun my-stage-hunks ()
+  "Stage hunks one by one until there are no more hunks to stage.
+   Return the cursor to its initial position afterwards."
+  (interactive)
+  (save-excursion
+    (goto-char (point-min))
+    (while (let ((initial-point (point)))
+             (git-gutter:next-hunk 1)
+             (not (= initial-point (point))))
+      (git-gutter:stage-hunk)))
+  (message "Staging complete."))
+
+(defun my-git-add ()
+  "Stage the current buffer's file in Git."
+  (interactive)
+  (when (and buffer-file-name
+             (locate-dominating-file buffer-file-name ".git"))
+    (shell-command (concat "git add " (shell-quote-argument buffer-file-name)))
+    (message "Staged file: %s" buffer-file-name)))
+
 
 (defun my-git-get-repo-root ()
   "Return the root directory of the current Git repository."
