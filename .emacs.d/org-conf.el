@@ -11,7 +11,8 @@
   (setq org-journal-dir "~/org/journal/"
         org-journal-date-format "%A, %d %B %Y"
         org-journal-enable-agenda-integration t
-        org-journal-carryover-items nil
+        ;; org-journal-carryover-items nil
+        org-journal-find-file 'find-file
         org-journal-file-format "%Y-%m-%d.org"
         )
   )
