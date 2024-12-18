@@ -9,10 +9,14 @@
   "Return the current Git branch if the buffer is in a Git repository."
   (when (and buffer-file-name
              (locate-dominating-file buffer-file-name ".git"))
-    (let ((branch (string-trim
-                   (shell-command-to-string "git rev-parse --abbrev-ref HEAD"))))
-      (if (string-empty-p branch)
-          nil
+    (let* ((default-directory (locate-dominating-file buffer-file-name ".git"))
+           (output (with-output-to-string
+                     (with-current-buffer standard-output
+                       (call-process "git" nil t nil "rev-parse" "--abbrev-ref" "HEAD"))))
+           (branch (string-trim output)))
+      (if (or (string-empty-p branch)
+              (string-match-p "fatal" branch))
+          (nil)
         branch))))
 
 (defvar mode-line-directory
@@ -39,7 +43,6 @@
                 "%l,%c -- %p" ; position in buffer
                 "  //  "
                 "%m" ; major mode
-                ;; minor-mode-alist ; minor modes
                 ))
 
 (provide 'my-mode-line)

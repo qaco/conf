@@ -31,7 +31,7 @@
   )
 
 (custom-set-variables
- '(git-gutter:update-interval 2))
+ '(git-gutter:update-interval 1))
 
 (global-set-key (kbd "C-x v a") 'my-git-add)
 (global-set-key (kbd "C-x v A") 'my-git-add-all)
