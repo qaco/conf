@@ -137,6 +137,11 @@ alias cvlc='cvlc -Z --no-metadata-network-access'
 alias glg='git log --graph --oneline'
 alias pdflatex='pdflatex -halt-on-error'
 alias neofetch='neofetch --gtk3 off --disable memory uptime'
+alias emacs-agenda='emacs -f org-agenda-list'
+alias emacs-todo='emacs -f org-todo-list'
+alias emacs-journal='emacs -f my-org-journal-new-entry'
+alias emacs-term='emacs -f multi-vterm'
+alias emacs-base='emacs -q --load=~/conf/.emacs.d/standalone.el'
 # Reminder:
 
 # Rip
