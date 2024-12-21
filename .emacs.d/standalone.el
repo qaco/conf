@@ -5,6 +5,7 @@
 
 ;; Edition defaults
 
+(setq initial-major-mode 'text-mode)
 (global-auto-revert-mode t)
 (save-place-mode 1)
 (setq save-place-forget-unreadable-files nil)
