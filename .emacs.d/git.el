@@ -19,6 +19,7 @@
          (text-mode . git-gutter-mode))
   :config
   (setq git-gutter:refresh-timer 1)
+  (setq git-gutter:update-interval 1)
   (setq git-gutter:delay 0)
   (set-face-background 'git-gutter:modified "purple")
   (set-face-foreground 'git-gutter:added "green")
@@ -29,9 +30,6 @@
   ("C-x v p" . 'git-gutter:previous-hunk)
   ("C-x v r" . 'git-gutter:revert-hunk)
   )
-
-(custom-set-variables
- '(git-gutter:update-interval 1))
 
 (global-set-key (kbd "C-x v a") 'my-git-add)
 (global-set-key (kbd "C-x v A") 'my-git-add-all)
