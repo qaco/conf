@@ -68,7 +68,7 @@
   :config
   (which-key-mode))
 
-;; Emacs-style edition
+;; Text edition
 
 (use-package move-text
   :ensure t
@@ -81,5 +81,33 @@
   (global-anzu-mode +1)
   :bind (("M-%" . anzu-query-replace)
          ("C-M-%" . anzu-query-replace-regexp)))
+
+;; Programmation specific
+
+(use-package eglot
+  :ensure t
+  :hook
+  (python-mode . eglot-ensure))
+
+(use-package company
+  :ensure t
+  :hook (python-mode . company-mode))
+
+(use-package highlight-indentation
+  :ensure t
+  :config
+  (setq highlight-indentation-blank-lines t)
+  :hook (prog-mode . highlight-indentation-mode))
+
+(use-package rainbow-delimiters
+  :ensure t
+  :hook ((emacs-lisp-mode . rainbow-delimiters-mode)
+         (z3-smt2-mode . rainbow-delimiters-mode)
+         (z3-mode . rainbow-delimiters-mode)))
+
+
+(require 'git)
+(require 'org-conf)
+(require 'console)
 
 (provide 'extra)
