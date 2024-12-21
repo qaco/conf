@@ -98,6 +98,12 @@
 
 ;; Programmation specific
 
+(defun my/python-mode-setup ()
+  "Custom configurations for python-mode."
+  (local-set-key (kbd "TAB") 'indent-for-tab-command))
+
+(add-hook 'python-mode-hook 'my/python-mode-setup)
+
 (use-package eglot
   :ensure t
   :hook
