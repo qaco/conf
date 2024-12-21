@@ -1,3 +1,8 @@
+;; Environment variables
+
+(setq custom-file null-device)
+(setq backup-directory-alist `(("." . "~/.saves")))
+
 ;; External tools
 
 (defvar browse-url-browser-function 'browse-url-firefox)
@@ -57,6 +62,15 @@
 ;; Theme
 
 (load-theme 'modus-vivendi t)
+
+;; 
+
+(setq load-path (append load-path '("~/conf/.emacs.d")))
+(setq load-path (append load-path '("~/conf/.emacs.d/elisp")))
+
+(require 'my-mode-line)
+(require 'mlir-mode)
+(require 'tablegen-mode)
 
 ;; Functions
 
