@@ -60,8 +60,8 @@
 ;; Functions
 
 (defun swap-buffer-with-adjacent (direction)
-  "Swap the current buffer with the buffer in the adjacent window in the specified DIRECTION,
-and move the cursor to the adjacent window."
+  "Swap the current buffer with the buffer in the adjacent window in
+   the specified DIRECTION, and move the cursor to the adjacent window."
   (let ((current-window (selected-window))
         (other-window (window-in-direction direction)))
     (when other-window
@@ -72,7 +72,8 @@ and move the cursor to the adjacent window."
         (select-window other-window)))))
 
 (defun split-window-below-and-center-cursor ()
-  "Split the window horizontally and center the cursor both in the old window and in the new one."
+  "Split the window horizontally and center the cursor both in the old
+   window and in the new one."
   (interactive)
   (let ((current-window (selected-window)))
     (select-window (split-window-below))
@@ -105,8 +106,8 @@ and move the cursor to the adjacent window."
 
 (defun wise-kill-or-copy-line (should-kill)
 
-  "Copy/kill the current line preserving column position. Doesn't save nor newline
-char nor indentation (doesn't save anything if blank line.)"
+  "Copy/kill the current line preserving column position. Doesn't save
+   nor newline char nor indentation (doesn't save anything if blank line.)"
   
   (interactive)
 
@@ -195,7 +196,6 @@ char nor indentation (doesn't save anything if blank line.)"
 (global-set-key (kbd "<M-up>") #'(lambda() (interactive) (forward-line -5)))
 
 ;; buffers
-
 (global-set-key (kbd "C-x C-<up>") #'(lambda() (interactive) (swap-buffer-with-adjacent 'above)))
 (global-set-key (kbd "C-x C-<down>") #'(lambda() (interactive) (swap-buffer-with-adjacent 'below)))
 (global-set-key (kbd "C-x C-<left>") #'(lambda() (interactive) (swap-buffer-with-adjacent 'left)))
@@ -203,7 +203,6 @@ char nor indentation (doesn't save anything if blank line.)"
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 
 ;; System
-
 (global-set-key (kbd "C-c c") 'my-project-compile-command)
 (global-set-key (kbd "C-c r") 'my-project-recompile-command)
 (global-set-key (kbd "C-x C-w") 'write-file)
