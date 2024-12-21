@@ -1,5 +1,9 @@
 (use-package org
-  :ensure t)
+  :ensure t
+  :bind ("C-c C-o t" . org-todo-list)
+  :bind ("C-c C-o a" . org-agenda-list)
+  :bind ("C-c C-o A" . org-agenda)
+  )
 
 (setq org-agenda-window-setup 'current-window)
 (setq org-agenda-files (append (directory-files-recursively "~/org/agenda/" "\\.org$")
@@ -16,6 +20,14 @@
         org-journal-file-format "%Y-%m-%d.org"
         )
   )
+
+(global-set-key (kbd "C-c C-o j") 'my-org-journal-new-entry)
+
+(defun my-org-journal-new-entry()
+  (interactive)
+  ;; Simulate the prefix C-u
+  (let ((current-prefix-arg '(1)))
+    (call-interactively 'org-journal-new-entry)))
 
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
