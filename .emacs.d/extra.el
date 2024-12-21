@@ -43,12 +43,16 @@
 
 ;; System
 
+;; Require the installation of xclip system-wide
 (use-package clipetty
   :ensure t
   :hook (after-init . global-clipetty-mode))
+(use-package xclip
+  :ensure t
+  :config
+  (xclip-mode 1))
 
 ;; Doc
-
 ;; Show descriptions in fido
 ;; (use-package marginalia
 ;;   :ensure t
