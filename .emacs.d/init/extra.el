@@ -127,8 +127,4 @@
          (z3-smt2-mode . rainbow-delimiters-mode)
          (z3-mode . rainbow-delimiters-mode)))
 
-(require 'git)
-(require 'org-conf)
-(require 'console)
-
 (provide 'extra)
