@@ -104,6 +104,8 @@
 
 (add-hook 'python-mode-hook 'my/python-mode-setup)
 
+;; An LSP server should be installed system-wide for each concerned
+;; language
 (use-package eglot
   :ensure t
   :hook
@@ -124,7 +126,6 @@
   :hook ((emacs-lisp-mode . rainbow-delimiters-mode)
          (z3-smt2-mode . rainbow-delimiters-mode)
          (z3-mode . rainbow-delimiters-mode)))
-
 
 (require 'git)
 (require 'org-conf)
