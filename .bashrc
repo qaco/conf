@@ -30,12 +30,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-#aliases
-
-alias git='LANG=en_GB git'
-
-#colored prompt
-
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/' -e 's/(\(.*\))/\1/' -e 's/\(.*\)/ (\1)/'
 }
@@ -66,39 +60,6 @@ export LESS_TERMCAP_mb=$'\E[01;34m'
 export LESS_TERMCAP_md=$'\E[01;34m'
 # export LESS_TERMCAP_so=$'\E[01;44;33m'
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --exclude-dir venv -I --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -114,37 +75,11 @@ if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
 
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export COLORTERM=truecolor
 export TERM=xterm-direct
-
 export VISUAL="emacs -nw"
 export EDITOR="$VISUAL"
-if tty | grep -q 'tty'; then
-    alias emacsclient="TERM=xterm-256color emacsclient -nw -c --alternate-editor= "
-    alias emacs="TERM=xterm-256color emacs -nw"
-else
-    alias emacsclient="emacsclient -nw -c --alternate-editor= "
-    alias emacs="emacs -nw"
-fi
 
-alias mc="TERM=xterm-256color mc"
-alias neomutt="TERM=xterm-256color neomutt"
-
-export PATH=$PATH:~/conf/scripts/
-
-alias mvlc='nvlc -Z --no-metadata-network-access'
-alias cvlc='cvlc -Z --no-metadata-network-access'
-alias glg='git log --graph --oneline'
-alias pdflatex='pdflatex -halt-on-error'
-alias neofetch='neofetch --gtk3 off --disable memory uptime'
-alias emacs-agenda='emacs -f org-agenda-list'
-alias emacs-todo='emacs -f org-todo-list'
-alias emacs-journal='emacs -f my-org-journal-new-entry'
-alias emacs-term='emacs -f multi-vterm'
-alias emacs-base='emacs -q --load=~/conf/.emacs.d/standalone.el'
-# Reminder:
-
-# Rip
-# abcde -o flac
-source ~/.paths
-alias FileCheck=FileCHeck-14
+[[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
+[[ -f ~/.paths ]] && source ~/.paths
