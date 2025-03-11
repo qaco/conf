@@ -7,9 +7,9 @@ rm ~/.bashrc
 rm ~/.profile
 rm ~/.zshrc
 ln -s ~/conf/.bashrc ~/.bashrc
-ln -s ~/conf/.zshrc ~/.zshrc
+cp ~/conf/.zshrc ~/.zshrc
 ln -s ~/conf/.profile ~/.profile
-ln -s .bash_aliases ../.bash_aliases
+cp ~/conf/.bash_aliases ~/.bash_aliases
 touch ~/.paths
 
 # terminal emulator management
