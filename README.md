@@ -24,6 +24,8 @@ Follow this link : https://www.ionos.com/digitalguide/server/configuration/how-t
 
 update-alternatives: usage of « /usr/bin/i3 » to provide « /usr/bin/x-window-manager
 
+```sudo update-alternatives --config x-window-manager```
+
 Sinon :
 * ```xdg-settings get default-web-browser```
 * ```xdg-settings set default-web-browser firefox-esr.desktop```
