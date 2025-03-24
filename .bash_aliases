@@ -27,7 +27,7 @@ alias neomutt="TERM=xterm-256color neomutt"
 
 alias mvlc='nvlc -Z --no-metadata-network-access'
 alias cvlc='cvlc -Z --no-metadata-network-access'
-alias glg='git log --graph --oneline'
+alias glg='git log --graph --oneline --decorate --color=always | less -R'
 alias pdflatex='pdflatex -halt-on-error'
 alias neofetch='neofetch --gtk3 off --disable memory uptime'
 alias emacs-agenda='emacs -f org-agenda-list'
