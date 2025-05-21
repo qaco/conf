@@ -1,0 +1,9 @@
+# Wallpaper management
+set $wallpaper ~/conf/images/lavender_balcony_wallpaper.png
+exec --no-startup-id feh --bg-fill $wallpaper
+# Idle management
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i $wallpaper
+bindsym $mod+x exec --no-startup-id i3lock -i $wallpaper
+bindsym $mod+Shift+x exec --no-startup-id systemctl suspend
+# Disable the screensaver
+# exec --no-startup-id xset s off
