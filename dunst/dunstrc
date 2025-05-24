@@ -1,0 +1,38 @@
+[global]
+    font = Liberation Mono 12
+    frame_width = 2
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    corner_radius = 6
+    transparency = 0
+    frame_color = "#61afef"
+    separator_color = frame
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    icon_position = off
+    word_wrap = yes
+    ignore_newline = no
+    width = 300
+    offset = 20x20
+    indicate_hidden = yes
+    shrink = no
+    monitor = 0
+
+[urgency_low]
+    background = "#282c34"
+    foreground = "#abb2bf"
+    timeout = 5
+
+[urgency_normal]
+    background = "#282c34"
+    foreground = "#abb2bf"
+    timeout = 7
+
+[urgency_critical]
+    background = "#e06c75"
+    foreground = "#282c34"
+    frame_color = "#be5046"
+    timeout = 0
+    

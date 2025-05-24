@@ -30,3 +30,4 @@ cp ~/conf/i3/i3bar.conky.conf.template ~/conf/i3/i3bar.conky.conf
 ln ~/conf/i3/i3bar.conky.conf ~/.config/i3/i3bar.conky.conf
 ln ~/conf/i3/conky-i3bar ~/.config/i3/conky-i3bar
 ln ~/conf/picom/picom.conf ~/.config/picom/picom.conf
+cp conf/dunst/dunstrc ~/.config/dunst/dunstrc
