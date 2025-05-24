@@ -5,9 +5,8 @@ include /home/hpompougnac/conf/i3/config-ext
 include /home/hpompougnac/conf/i3/shortcuts-apps.conf
 include /home/hpompougnac/conf/i3/shortcuts-windows.conf
 include /home/hpompougnac/conf/i3/theme.conf
-
-# Compositor
-exec_always --no-startup-id picom
+include /home/hpompougnac/conf/i3/autostart.conf
+include /home/hpompougnac/conf/i3/floating_windows.conf
 
 # System keybindings
 bindsym $mod+Shift+r restart
@@ -17,19 +16,3 @@ bindsym $mod+Shift+z exec ~/conf/scripts/screen_builtin.sh
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-
-# Applets
-exec --no-startup-id caffeine-indicator
-exec --no-startup-id mate-volume-control-status-icon # from mate-media
-exec --no-startup-id pulseaudio --daemonize
-exec --no-startup-id blueman-applet
-exec --no-startup-id nm-applet
-exec --no-startup-id mate-power-manager 
-
-# Remap keyboard
-exec --no-startup-id xmodmap -e "keycode 16 = egrave 7 egrave 7 grave Egrave grave"
-exec --no-startup-id xmodmap -e "keycode 49 = at numbersign at numbersign"
-exec --no-startup-id xmodmap -e "keycode 105 = Multi_key"
-
-for_window [class="Eom" instance="eom"] floating enable
-for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
